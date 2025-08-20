@@ -64,26 +64,34 @@ def lnlike_all(
     # Extract values
     lam_po, H0_po, omega_po = theta
 
-    # Calculate maximum in n_flares_bgs
-    max_n_flares_bg = np.nanmax([np.nanmax(f) for f in n_agns if len(f) > 0])
-
     # Sample flare rate
     # Currently using process id as seed
     # Note that the pid does not index the processes spawned by emcee but appears to be the python process id;
     # in this case the numbers are ~70-80
-    # Not sure if this ensures that the rng is different for each process
+    # Not sure if this ensures that the rng is different for each process,
+    #   but it's better than the same seed
     rng = np.random.default_rng(int(current_process().name.split("-")[-1]))
-    dist = getattr(rng, flare_rate_distribution["type"])
+    fr_dist = getattr(rng, flare_rate_distribution["type"])
     flare_rate = np.nan * np.ones_like(flares_per_agn_average)
     for i, f in enumerate(flares_per_agn_average):
+        # Continue if nan flare rate
         if np.isnan(f):
             continue
+        # Continue if flare rate already set;
+        #   note that below, flare_rate entries are updated wherever flares_per_agn_average is the same
         if ~np.isnan(flare_rate[i]):
             continue
+        # Sample from flare rate distribution until a value > 0 is drawn
         fr = -1
         while fr < 0:
-            fr = dist(f, **flare_rate_distribution["kwargs"])
+            fr = fr_dist(f, **flare_rate_distribution["kwargs"])
+        # Save rate
         flare_rate[flares_per_agn_average == f] = fr
+
+    # Calculate maximum in n_flares_bgs
+    max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
+    max_n_flares_bg = max_n_agn * np.nanmax(flares_per_agn_average)
+    # TODO: make sure ^^these are being computed and used correctly
 
     # Iterate over GW followups
     lnlike_arr = np.zeros(len(s_arrs))
@@ -103,7 +111,7 @@ def lnlike_all(
         if (s_arr_i.shape[0]) > 0:
             # n_agns_i = n_agns_i[~np.isnan(n_agns_i)]
             n_flares_bgs_i = n_agns_i * flare_rate
-            n_flares_bgs_i = n_flares_bgs_i[~np.isnan(n_flares_bgs_i)]
+            n_flares_bgs_i = n_flares_bgs_i[b_arrs[i] != 1]
 
             # lnlike_arr.append(lnlike(s_arr,b_arr,lam_arr,f))
             lnlike_arr[i] = lnlike(
@@ -229,14 +237,6 @@ def calc_arrs(
         # Get flare indices
         fis = list(np.where(~np.isnan(cand_hpxprobden_arr[gwi]))[0])
 
-        # Skip remainder if no candidates
-        if len(fis) == 0:
-            continue
-
-        # Get/calculate candidate coordinates, number of candidates for this followup
-        followup_zs = cand_zs_arr[fis]
-        ncands = followup_zs.shape[0]
-
         ####################
         ###Expected flares##
         ####################
@@ -245,7 +245,18 @@ def calc_arrs(
         n_agn = np.polynomial.Polynomial(n_agn_coeffs[gwi])(H0)
 
         # Add to array
-        n_agns[gwi, fis] = n_agn
+        n_agns[gwi, :] = n_agn
+
+        ##############################
+        # Skip remainder if no candidates
+        print(f"GW {gwi} has {len(fis)} coincident flares")
+        if len(fis) == 0:
+            continue
+        ##############################
+
+        # Get/calculate candidate coordinates, number of candidates for this followup
+        followup_zs = cand_zs_arr[fis]
+        ncands = followup_zs.shape[0]
 
         ####################
         ###    Signal    ###
@@ -293,7 +304,7 @@ def _setup_task(i, config, df_fitparams):
     ##############################
 
     # Get eventname, strip asterisk if needed
-    gweventname = g23.DF_GW["gweventname"][i]
+    gweventname = g23.DF_GWPLUS["gweventname"][i]
     if gweventname.endswith("*"):
         gweventname = gweventname[:-1]
     print(gweventname)
@@ -304,7 +315,7 @@ def _setup_task(i, config, df_fitparams):
     print("Loading skymap...")
 
     # Load skymap
-    sm = io.get_gwtc_skymap(config["gwmapdir"], g23.DF_GW["gweventname"][i])
+    sm = io.get_gwtc_skymap(config["gwmapdir"], g23.DF_GWPLUS["gweventname"][i])
 
     # Get data from skymap
     pbden = sm["PROBDENSITY"]
@@ -412,7 +423,7 @@ def _setup_task(i, config, df_fitparams):
         )
 
     # Load skymap
-    sm = io.get_gwtc_skymap(config["gwmapdir"], g23.DF_GW["gweventname"][i])
+    sm = io.get_gwtc_skymap(config["gwmapdir"], g23.DF_GWPLUS["gweventname"][i])
     # Iterate over a sample of H0 values
     n_agns = []
     hs = np.linspace(20, 120, num=10)
@@ -433,7 +444,7 @@ def _setup_task(i, config, df_fitparams):
     del sm
 
     # Append f_cover for GW event
-    return_dict["f_covers"] = g23.DF_GW["f_cover"][i]
+    return_dict["f_covers"] = g23.DF_GWPLUS["f_cover"][i]
 
     return return_dict
 
@@ -498,6 +509,21 @@ def setup(config, df_fitparams, nproc=1):
     ###    GWs + flares        ###
     ##############################
 
+    # Select GWs
+    idxs = g23.DF_GWPLUS.index
+    masks = []
+    # Mass cut
+    massmask = (g23.DF_GWPLUS[config["bbhmass_type"]] >= config["bbhmass_min"]) & (
+        g23.DF_GWPLUS[config["bbhmass_type"]] < config["bbhmass_max"]
+    )
+    masks.append(massmask)
+    # Combine masks, select idxs
+    mask = np.all(np.array(masks), axis=0)
+    idxs = idxs[mask]
+    print(
+        f"Using {len(idxs)}/{g23.DF_GWPLUS.shape[0]} GWs with {config['bbhmass_min']} <= {config['bbhmass_type']} < {config['bbhmass_max']}..."
+    )
+
     # Iterate over followups
     if nproc > 1:
         from multiprocessing import Pool
@@ -505,10 +531,10 @@ def setup(config, df_fitparams, nproc=1):
         with Pool(nproc) as p:
             results = p.starmap(
                 _setup_task,
-                [(i, config, df_fitparams) for i in g23.DF_GW.index],
+                [(i, config, df_fitparams) for i in idxs],
             )
     else:
-        results = [_setup_task(i, config, df_fitparams) for i in g23.DF_GW.index]
+        results = [_setup_task(i, config, df_fitparams) for i in idxs]
 
     # Unpack results
     f_covers = np.array([r["f_covers"] for r in results])

@@ -8,8 +8,8 @@ dt_followup: 200.0 # Length of follow-up campaign in days
 gwmapdir: "/hildafs/projects/phy220048p/share/skymaps"
 
 # Mass cuts
-bbhmass_type: "mass_1_source" # Type of mass to apply cuts to
-bbhmass_min: 0.0 # Lower limit for BBH mass in solar masses
+bbhmass_type: "final_mass_source" # Type of mass to apply cuts to
+bbhmass_min: 40.0 # Lower limit for BBH mass in solar masses
 bbhmass_max: 200.0 # Upper limit for BBH mass in solar masses
 
 # AGN distribution

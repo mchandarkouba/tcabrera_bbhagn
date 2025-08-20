@@ -9,7 +9,7 @@ gwmapdir: "/hildafs/projects/phy220048p/share/skymaps"
 
 # Mass cuts
 bbhmass_type: "mass_1_source" # Type of mass to apply cuts to
-bbhmass_min: 0.0 # Lower limit for BBH mass in solar masses
+bbhmass_min: 40.0 # Lower limit for BBH mass in solar masses
 bbhmass_max: 200.0 # Upper limit for BBH mass in solar masses
 
 # AGN distribution
