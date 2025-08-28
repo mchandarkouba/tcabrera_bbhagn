@@ -153,7 +153,7 @@ if __name__ == "__main__":
         ] * u.ABmag
 
     # Define constants
-    N_GW_followups = g23.DF_GW.shape[0]  # [50,10]
+    N_GW_followups = g23.DF_GW_G23.shape[0]  # [50,10]
     lam_arr = np.linspace(0, 1.0, num=100)
 
     # Load lightcurve fit parameters

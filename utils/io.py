@@ -1,8 +1,8 @@
 import glob
 
-import numpy as np
 import astropy_healpix as ah
 import ligo.skymap.moc as lsm_moc
+import numpy as np
 from astropy.table import Table
 from ligo.skymap.io import read_sky_map
 
@@ -14,7 +14,7 @@ from ligo.skymap.io import read_sky_map
 #   "GWTC3": "https://zenodo.org/records/8177023/files/IGWN-GWTC3p0-v2-PESkyLocalizations.tar.gz"
 
 
-def get_gwtc_skymap(
+def get_gwtc_skymap_path(
     mapdir,
     gweventname,
     catdirs={
@@ -155,8 +155,22 @@ def get_gwtc_skymap(
         raise ValueError(f"No skymaps found for {gweventname} [globstr: {globstr}]")
     else:
         # Load skymap
-        hs = read_sky_map(mappaths[0], moc=True)
+        skymap_path = mappaths[0]
 
+    return skymap_path
+
+
+def get_gwtc_skymap(
+    mapdir,
+    gweventname,
+    catdirs={
+        "GWTC2": "all_skymaps",
+        "GWTC2.1": "IGWN-GWTC2p1-v2-PESkyMaps",
+        "GWTC3": "skymaps",
+    },
+):
+    sm_path = get_gwtc_skymap_path(mapdir, gweventname, catdirs=catdirs)
+    hs = read_sky_map(sm_path, moc=True)
     return hs
 
 

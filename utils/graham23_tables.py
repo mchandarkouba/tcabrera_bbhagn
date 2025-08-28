@@ -1,13 +1,15 @@
 import os.path as pa
 
+import numpy as np
 import pandas as pd
 
-from .paths import DATADIR
+from .paths import PROJDIR, DATADIR
+from .io import get_gwtc_skymap_path
 
 TABLEDIR = pa.join(DATADIR, "graham23_tables")
 
 # Get GW catalog information
-DF_GW = pd.read_csv(f"{TABLEDIR}/graham23_table1.plus.dat", sep="\s+")
+DF_GW_G23 = pd.read_csv(f"{TABLEDIR}/graham23_table1.plus.dat", sep="\s+")
 
 # Get GW-flare association information
 DF_ASSOC = pd.read_csv(f"{TABLEDIR}/graham23_table3.plus.dat", sep="\s+")
@@ -34,6 +36,31 @@ DF_ASSOC["flare_dec"] = flaredecs
 DF_FLARE = DF_ASSOC.drop_duplicates(subset=["flarename"]).drop(
     columns=["gweventname", "ConfLimit", "vk_max"]
 )
+DF_FLARE.rename(columns={"flare_ra": "ra", "flare_dec": "dec"}, inplace=True)
+# Add fit parameters
+df_fitparams = pd.read_csv(f"{PROJDIR}/fit_lightcurves/fitparams.csv")
+df_temp = []
+# Iterate over flares
+for fn in np.unique(df_fitparams["flarename"]):
+    dict_temp = {"flarename": fn}
+    # Get fit parameters for this flare
+    df_fpfn = df_fitparams[df_fitparams["flarename"] == fn]
+    # Iterate over filters
+    for f in np.unique(df_fitparams["filter"]):
+        # Iterate over columns, skipping flarename, filter
+        for col in df_fitparams.columns:
+            if col not in ["flarename", "filter"]:
+                # If filter is present for this flare, get value
+                if f in df_fpfn["filter"].values:
+                    dict_temp[f"{col}_{f}"] = df_fpfn[df_fpfn["filter"] == f][
+                        col
+                    ].values[0]
+                # Otherwise, set to nan
+                else:
+                    dict_temp[f"{col}_{f}"] = np.nan
+    df_temp.append(dict_temp)
+df_temp = pd.DataFrame(df_temp)
+DF_FLARE = DF_FLARE.merge(df_temp, on="flarename", how="left")
 
 # Get bright? GW information
 DF_GWBRIGHT = pd.read_csv(f"{TABLEDIR}/graham23_table4.plus.dat", sep="\s+")
@@ -41,7 +68,20 @@ DF_GWBRIGHT = pd.read_csv(f"{TABLEDIR}/graham23_table4.plus.dat", sep="\s+")
 # Get background flare information
 DF_ASSOCPARAMS = pd.read_csv(f"{TABLEDIR}/graham23_table5.plus.dat", sep="\s+")
 
-# Add gwtc data to graham23 table 1
+### DF_GW
+# Get gweventname, f_cover from table 1
+DF_GW = DF_GW_G23[["gweventname", "f_cover"]].copy()
+
+# Add skymap paths
+MAPDIR = "/hildafs/projects/phy220048p/share/skymaps"
+DF_GW["skymap_path"] = DF_GW["gweventname"].apply(
+    lambda x: get_gwtc_skymap_path(MAPDIR, x)
+)
+
+# Remove * from event names (required to select waveform)
+DF_GW["gweventname"] = DF_GW["gweventname"].str.strip("*")
+
+# Add gwtc data
 DF_GWTC = pd.read_csv(f"{DATADIR}/gwtc/events.csv")
 matchrows = []
 for i, row in DF_GW.iterrows():
@@ -87,7 +127,7 @@ for i, row in DF_GW.iterrows():
     else:
         print(f"Did not find {row['gweventname']} in gwtc")
 df_match = pd.DataFrame(matchrows)
-DF_GWPLUS = pd.concat(
+DF_GW = pd.concat(
     [
         DF_GW,
         df_match,

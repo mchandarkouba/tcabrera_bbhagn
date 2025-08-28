@@ -62,7 +62,7 @@ def calc_arrs_for_directory(directory, force=False):
             config["z_max_b"],
         )
         # Cast as pd.DataFrames
-        gweventnames = g23.DF_GW["gweventname"].values
+        gweventnames = g23.DF_GW_G23["gweventname"].values
         gweventnames = np.array([gn.replace("*", "") for gn in gweventnames])
         flarenames = g23.DF_FLARE["flarename"].values
         s_arrs = pd.DataFrame(

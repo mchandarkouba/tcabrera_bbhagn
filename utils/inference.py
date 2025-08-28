@@ -5,7 +5,11 @@ from math import pi
 import astropy.units as u
 import astropy_healpix as ah
 import numpy as np
+from astropy.coordinates import SkyCoord
+from astropy.time import Time
+from astropy.io import fits
 from astropy.cosmology import FlatLambdaCDM
+from ligo.skymap.io import read_sky_map
 from ligo.skymap.postprocess.crossmatch import crossmatch
 import ligo.skymap.moc as lsm_moc
 from numpy.polynomial.polynomial import Polynomial
@@ -22,6 +26,44 @@ import utils.io as io
 from utils.gwselection import selection_beta
 
 ######################################################################
+
+
+def mask_flares_in_followup(
+    healpix_path,
+    flare_coords,
+    flare_times,
+    cosmo=FlatLambdaCDM(H0=70, Om0=0.3),
+    ci=0.9,
+    dt_followup=200 * u.day,
+):
+    """Return mask of flares in the given healpix ci.
+
+    Parameters
+    ----------
+    healpix_path : _type_
+        _description_
+    flare_coords : SkyCoord
+        Assumed to be 3D for now
+    ci : float, optional
+        _description_, by default 0.9
+    """
+    ### Spatial match
+    # Load healpix
+    sm = read_sky_map(healpix_path, moc=True)
+    # Perform crossmatch
+    xm = crossmatch(sm, flare_coords, cosmology=True, cosmo=cosmo)
+    # Return mask on flare coords
+    smask = xm.searched_prob_vol <= ci
+    ### Temporal match
+    # Get gw time
+    with fits.open(healpix_path) as hdul:
+        gw_time = Time(hdul[1].header["DATE-OBS"], format="isot", scale="utc")
+    # Calculate time difference, mask
+    delta_t = flare_times - gw_time
+    tmask = (delta_t >= 0 * u.day) & (delta_t < dt_followup)
+    # Return combined mask
+    mask = smask & tmask
+    return mask
 
 
 def gauss(mu_gauss, std_gauss, x_value):
@@ -113,7 +155,6 @@ def lnlike_all(
             n_flares_bgs_i = n_agns_i * flare_rate
             n_flares_bgs_i = n_flares_bgs_i[b_arrs[i] != 1]
 
-            # lnlike_arr.append(lnlike(s_arr,b_arr,lam_arr,f))
             lnlike_arr[i] = lnlike(
                 theta,
                 s_arr_i,
@@ -131,9 +172,6 @@ def lnlike_all(
 
     # Sum log likelihoods and return with prior
     lnlikesum = np.sum(lnlike_arr, axis=0)
-    # fixer=lnlikesum[0]
-    # like=np.exp(lnlikesum-fixer)
-    # normalization=np.trapezoid(like,lam_arr)
 
     return lnlikesum
 
@@ -285,17 +323,26 @@ def calc_arrs(
     return s_arrs.to(1 / u.sr).value, b_arrs.to(1 / u.sr).value, n_agns
 
 
-def _setup_task(i, config, df_fitparams):
+def _setup_task(i, config):
     print("*" * 30)
     print(f"Index {i}")
     return_dict = {}
+    cosmo = FlatLambdaCDM(H0=config["H00"], Om0=config["Om0"])
+    flare_coords = SkyCoord(
+        ra=g23.DF_FLARE["ra"].values * u.deg,
+        dec=g23.DF_FLARE["dec"].values * u.deg,
+        distance=cosmo.luminosity_distance(g23.DF_FLARE["Redshift"].values),
+    )
+    flare_times = Time(
+        g23.DF_FLARE["t_peak_g"] - 2 * g23.DF_FLARE["t_rise_g"], format="mjd"
+    )
 
     ##############################
     ###  Signals (BBH flares)  ###
     ##############################
 
     # Get eventname, strip asterisk if needed
-    gweventname = g23.DF_GWPLUS["gweventname"][i]
+    gweventname = g23.DF_GW["gweventname"][i]
     if gweventname.endswith("*"):
         gweventname = gweventname[:-1]
     print(gweventname)
@@ -306,7 +353,7 @@ def _setup_task(i, config, df_fitparams):
     print("Loading skymap...")
 
     # Load skymap
-    sm = io.get_gwtc_skymap(config["gwmapdir"], g23.DF_GWPLUS["gweventname"][i])
+    sm = read_sky_map(g23.DF_GW["skymap_path"][i], moc=True)
 
     # Get data from skymap
     pbden = sm["PROBDENSITY"]
@@ -314,31 +361,20 @@ def _setup_task(i, config, df_fitparams):
     distmu = sm["DISTMU"]
     distsigma = sm["DISTSIGMA"]
 
-    # # Make idx_sort_up (array of pb indices, from highest to lowest pb)
-    # sm["AREA"] = lsm_moc.uniq2pixarea(sm["UNIQ"]) * u.sr
-    # sm["PROB"] = sm["PROBDENSITY"] * sm["AREA"]
-    # pb = sm["PROB"]
-    # idx_sort = np.argsort(pb)
-    # idx_sort_up = list(reversed(idx_sort))
-    # # Add pbs until pb_frac is reached
-    # sum = 0.0
-    # id = 0
-    # while sum < config["followup_prob"]:
-    #     this_idx = idx_sort_up[id]
-    #     sum = sum + pb[this_idx]
-    #     id = id + 1
-    # # Cut indices to <pb_frac> credible region
-    # idx_sort_cut = idx_sort_up[:id]
-    # return_dict["n_idx_sort_cut"] = len(idx_sort_cut)
-
     ##############################
     ###         Flares         ###
     ##############################
     print("Loading flares...")
 
     # Get flares for this followup
-    assoc_mask = g23.DF_ASSOC["gweventname"] == gweventname
-    followup_flares = g23.DF_ASSOC["flarename"][assoc_mask]
+    mask = mask_flares_in_followup(
+        g23.DF_GW["skymap_path"][i],
+        flare_coords,
+        flare_times,
+        cosmo=cosmo,
+        dt_followup=config["dt_followup"] * u.day,
+    )
+    followup_flares = g23.DF_FLARE["flarename"][mask]
 
     # Iterate over flares
     pbdens = []
@@ -355,8 +391,8 @@ def _setup_task(i, config, df_fitparams):
             continue
 
         # Get uniqs for the flare
-        lon = fr["flare_ra"] * u.deg
-        lat = fr["flare_dec"] * u.deg
+        lon = fr["ra"] * u.deg
+        lat = fr["dec"] * u.deg
         uniq = io.lonlat_to_uniq(
             lon,
             lat,
@@ -415,7 +451,7 @@ def _setup_task(i, config, df_fitparams):
         )
 
     # Load skymap
-    sm = io.get_gwtc_skymap(config["gwmapdir"], g23.DF_GWPLUS["gweventname"][i])
+    sm = read_sky_map(g23.DF_GW["skymap_path"][i], moc=True)
     # Iterate over a sample of H0 values
     n_agns = []
     hs = np.linspace(20, 120, num=10)
@@ -436,12 +472,12 @@ def _setup_task(i, config, df_fitparams):
     del sm
 
     # Append f_cover for GW event
-    return_dict["f_covers"] = g23.DF_GWPLUS["f_cover"][i]
+    return_dict["f_covers"] = g23.DF_GW["f_cover"][i]
 
     return return_dict
 
 
-def setup(config, df_fitparams, nproc=1):
+def setup(config, nproc=1):
     ##############################
     ###    Flares  ###
     ##############################
@@ -462,28 +498,18 @@ def setup(config, df_fitparams, nproc=1):
     # Iterate over flares
     flares_per_agn_average = []
     for _, fr in g23.DF_FLARE.iterrows():
-        # Get fitparams
-        df_fitparams_flare = df_fitparams[df_fitparams["flarename"] == fr["flarename"]]
-
-        # Iterate over filters
+        # Iterate over filters, using only g and r
         rates = []
         print("\n", fr["flarename"])
-        for f in df_fitparams_flare["filter"]:
-            # Use only g and r band data
-            if f not in ["g", "r"]:
-                continue
-
-            # Get row
-            params = df_fitparams_flare[df_fitparams_flare["filter"] == f]
-
+        for f in ["g", "r"]:
             # Calculate structure function prob
             # 3σ = 3 * t_rise is a conservative estimate for the Δt of the Δm
             # / (1+z) converts to rest frame timescale
-            delta_t = 3 * params["t_rise"].values[0] / (1 + fr["Redshift"])
+            delta_t = 3 * fr[f"t_rise_{f}"] / (1 + fr["Redshift"])
             prob = flaremodel.flare_rate(
                 f,
                 delta_t,
-                -params["f_peak"].values[0],
+                -fr[f"f_peak_{f}"],
                 fr["Redshift"],
             )
 
@@ -502,18 +528,19 @@ def setup(config, df_fitparams, nproc=1):
     ##############################
 
     # Select GWs
-    idxs = g23.DF_GWPLUS.index
+    idxs = g23.DF_GW.index
     masks = []
-    # Mass cut
-    massmask = (g23.DF_GWPLUS[config["bbhmass_type"]] >= config["bbhmass_min"]) & (
-        g23.DF_GWPLUS[config["bbhmass_type"]] < config["bbhmass_max"]
+    # Mass cut, ignoring if mass is nan
+    massmask = (g23.DF_GW[config["bbhmass_type"]] >= config["bbhmass_min"]) & (
+        g23.DF_GW[config["bbhmass_type"]] < config["bbhmass_max"]
     )
+    massmask = massmask | (np.isnan(g23.DF_GW[config["bbhmass_type"]]))
     masks.append(massmask)
     # Combine masks, select idxs
     mask = np.all(np.array(masks), axis=0)
     idxs = idxs[mask]
     print(
-        f"Using {len(idxs)}/{g23.DF_GWPLUS.shape[0]} GWs with {config['bbhmass_min']} <= {config['bbhmass_type']} < {config['bbhmass_max']}..."
+        f"Using {len(idxs)}/{g23.DF_GW.shape[0]} GWs with {config['bbhmass_min']} <= {config['bbhmass_type']} < {config['bbhmass_max']}..."
     )
 
     # Iterate over followups
@@ -523,10 +550,10 @@ def setup(config, df_fitparams, nproc=1):
         with Pool(nproc) as p:
             results = p.starmap(
                 _setup_task,
-                [(i, config, df_fitparams) for i in idxs],
+                [(i, config) for i in idxs],
             )
     else:
-        results = [_setup_task(i, config, df_fitparams) for i in idxs]
+        results = [_setup_task(i, config) for i in idxs]
 
     # Unpack results
     f_covers = np.array([r["f_covers"] for r in results])

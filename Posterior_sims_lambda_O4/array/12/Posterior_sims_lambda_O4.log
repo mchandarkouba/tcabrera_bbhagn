@@ -26,63 +26,39 @@ r 2.12e-06
  J154342.46+461233.4
 g 2.12e-06
 r 2.12e-06
-Using 51/83 GWs with 0.0 <= mass_1_source < 40.0...
+Using 54/83 GWs with 0.0 <= mass_1_source < 40.0...
 ******************************
 Index 0
 ******************************
 Index 1
 ******************************
 Index 2
-GW190408_181802
-Loading skymap...
-GW190412
-Loading skymap...
+******************************
+Index 5
 ******************************
 Index 6
+******************************
+Index 7
 ******************************
 Index 9
 ******************************
 Index 10
-GW190413_052954
-Loading skymap...
 ******************************
 Index 12
-GW190512_180714
-Loading skymap...
-GW190513_205428
-Loading skymap...
-GW190425
-Loading skymap...
-GW190517_055101
-Loading skymap...
+******************************
+Index 16
+******************************
+Index 19
 ******************************
 Index 22
 ******************************
-Index 23
-GW190707_093326
-Loading skymap...
+Index 24
 ******************************
-******************************Index 24
-
-Index 16
-GW190708_232457******************************
-
-Loading skymap...
-Index 19
-GW190719_215514
-Loading skymap...
-GW190527_092055
-Loading skymap...
-GW190630_185205
-Loading skymap...
+Index 23
+******************************
 ******************************
 Index 25
-******************************
 Index 26
-GW190720_000836
-Loading skymap...
-GW190727_060333
-Loading skymap...
 ******************************
 Index 27
 ******************************
@@ -91,306 +67,442 @@ Index 29
 Index 30
 ******************************
 Index 31
-GW190728_064510
-Loading skymap...
-******************************
-Index 35
-GW190803_022701
-Loading skymap...
 ******************************
 Index 32
 ******************************
-GW190814Index 36GW190828_063405
-
-Loading skymap...
-
-Loading skymap...
-GW190915_235702
-Loading skymap...
+Index 35
 ******************************
-Index 38
-GW190828_065509
-Loading skymap...
+Index 36
 ******************************
 Index 41
-GW190924_021846
-Loading skymap...
 ******************************
 Index 44
-GW190930_133541
+******************************
+Index 33
+******************************
+Index 38
+GW190412
 Loading skymap...
-GW190725_174728
+GW190408_181802
 Loading skymap...
-GW190917_114630
+******************************
+Index 48
+******************************
+Index 47
+GW190413_052954
+Loading skymap...
+GW190424_180648
+Loading skymap...
+GW190512_180714
+Loading skymap...
+GW190426_152155
+Loading skymap...
+GW190425
 Loading skymap...
 ******************************
 Index 45
-GW190925_232845
+GW190708_232457
 Loading skymap...
-******************************
-Index 47
-******************************
-Index 48
-GW191103_012549
+GW190513_205428
 Loading skymap...
-GW191105_143521
+GW190727_060333
 Loading skymap...
-******************************
-Index 50
+GW190803_022701
+Loading skymap...
+GW190719_215514
+Loading skymap...
+GW190828_063405
+Loading skymap...
+GW190828_065509
+Loading skymap...
+GW190814
+Loading skymap...
 ******************************
 Index 51
 ******************************
-Index 53
+Index 50
+GW190924_021846
+Loading skymap...
+GW190707_093326
+Loading skymap...
+GW190720_000836
+Loading skymap...
+GW190725_174728
+Loading skymap...
+GW190909_114149
+Loading skymap...
+GW190630_185205
+Loading skymap...
+GW190915_235702
+Loading skymap...
+GW190728_064510
+Loading skymap...
+GW191105_143521
+Loading skymap...
+GW190527_092055
+Loading skymap...
+GW190930_133541
+Loading skymap...
 GW191113_071753
 Loading skymap...
-******************************
-Index 54
+GW191103_012549
+Loading skymap...
+GW190917_114630
+Loading skymap...
+GW190517_055101
+Loading skymap...
+GW190925_232845
+Loading skymap...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...Loading flares...
+
 GW191126_115259
 Loading skymap...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...Loading flares...
+
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+Loading flares...
+GW190814_C01:SEOBNRv4PHM.fits [1. 1. 1. 1. 1. 1.] [1.00001974 1.00001974 1.00001974 1.00001974 1.00001974 1.00001974]
+GW190814 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190719_215514_C01:NRSur7dq4.fits [1.         1.         0.99997937 1.         0.97196179 1.        ] [0.99997651 0.99997651 0.99948793 0.99997651 0.93526753 0.99997651]
+GW190719_215514 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190527_092055_C01:NRSur7dq4.fits [1. 1. 1. 1. 1. 1.] [0.97719013 0.97719013 0.97719013 0.97719013 0.97719013 0.97719013]
+GW190527_092055 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190828_063405_C01:NRSur7dq4.fits [1. 1. 1. 1. 1. 1.] [1.00000414 1.00000414 1.00000414 1.00000414 1.00000414 1.00000414]
+IGWN-GWTC3p0-v1-GW191105_143521_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [0.99992766 0.99992766 0.99992766 0.99992766 0.99992766 0.99992766]
+GW190828_063405 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW191105_143521 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190728_064510_C01:SEOBNRv4PHM.fits [1. 1. 1. 1. 1. 1.] [1.00000368 1.00000368 1.00000368 1.00000368 1.00000368 1.00000368]
+GW190728_064510 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190413_052954_C01:NRSur7dq4.fits [1.         1.         1.         0.99999265 1.         1.        ] [0.9994774  0.9994774  0.9994774  0.99941731 0.9994774  0.9994774 ]
+GW190413_052954 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC2p1-v2-GW190725_174728_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [1.00000367 1.00000367 1.00000367 1.00000367 1.00000367 1.00000367]
+GW190725_174728 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190517_055101_C01:NRSur7dq4.fits [1. 1. 1. 1. 1. 1.] [0.9995076 0.9995076 0.9995076 0.9995076 0.9995076 0.9995076]
+GW190517_055101 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190424_180648_C01:NRSur7dq4.fits [0.92939801 0.97749529 0.91042858 0.6620447  0.99934317 0.76037396] [0.97291858 0.99774612 0.45302565 0.15788488 0.99691295 0.99870229]
+GW190424_180648 2    J181719.94+541910.0
+3    J224333.95+760619.2
+Name: flarename, dtype: object
+Calculating background rate...
+GW190512_180714_C01:SEOBNRv4PHM.fits [1.         1.         1.         0.99973592 1.         0.99999465] [0.99968953 0.99968953 0.99968953 0.99968368 0.99968953 0.99968953]
+GW190512_180714 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190924_021846_C01:SEOBNRv4PHM.fits [1.         1.         1.         1.         1.         0.99957861] [1.0000042 1.0000042 1.0000042 1.0000042 1.0000042 1.0000042]
+GW190924_021846 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190727_060333_C01:NRSur7dq4.fits [1. 1. 1. 1. 1. 1.] [0.9995585 0.9995585 0.9995585 0.9995585 0.9995585 0.9995585]
+GW190707_093326_C01:SEOBNRv4PHM.fits [1. 1. 1. 1. 1. 1.] [0.99999114 0.99999114 0.99999114 0.99999114 0.99999114 0.99999114]
+GW190727_060333 Series([], Name: flarename, dtype: object)
+GW190707_093326 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+Calculating background rate...
+GW190630_185205_C01:NRSur7dq4.fits [0.99866861 0.99392935 0.99764235 0.9824664  0.98665561 0.99999066] [0.99980615 0.99980615 0.99980615 0.99980615 0.99980615 0.99980615]
+GW190630_185205 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW191126_115259_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1.         0.99970722 0.98323207 1.         0.99999846 1.        ] [0.99998999 0.99998999 0.99823095 0.99998999 0.99998999 0.99998999]
+GW191126_115259 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190803_022701_C01:NRSur7dq4.fits [0.82775753 1.         1.         1.         0.37205421 1.        ] [0.81047796 0.99999519 0.99999519 0.99999519 0.47819468 0.99999519]
+GW190909_114149_C01:SEOBNRv4PHM.fits [0.91145388 1.         1.         1.         0.70847245 1.        ] [0.72036871 0.99894957 0.99894957 0.99894957 0.05998016 0.99894957]
+GW190803_022701 GW190909_114149 4    J120437.98+500024.0
+Name: flarename, dtype: object
+4    J120437.98+500024.0
+Name: flarename, dtype: object
+Calculating background rate...
+Calculating background rate...
+GW190828_065509_C01:SEOBNRv4PHM.fits [1. 1. 1. 1. 1. 1.] [0.999999 0.999999 0.999999 0.999999 0.999999 0.999999]
+GW190828_065509 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190513_205428_C01:NRSur7dq4.fits [1. 1. 1. 1. 1. 1.] [0.99996478 0.99996478 0.99996478 0.99996478 0.99996478 0.99996478]
+GW190513_205428 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC2p1-v2-GW190917_114630_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1.         1.         1.         1.         0.99998478 1.        ] [0.99996246 0.99996246 0.99996246 0.99996246 0.99996246 0.99996246]
+GW190917_114630 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190915_235702_C01:SEOBNRv4PHM.fits [0.25042282 1.         1.         1.         1.         1.        ] [0.80671688 1.00000306 1.00000306 1.00000306 1.00000306 1.00000306]
+GW190915_235702 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW191113_071753_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1.         0.9999997  1.         0.99986995 1.         1.        ] [0.9943173 0.9943173 0.9943173 0.9943173 0.9943173 0.9943173]
+GW191113_071753 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190426_152155_C01:SEOBNRv4PHM.fits [1.         1.         0.99999916 0.88267675 0.99999214 1.        ] [0.99931524 0.99931524 0.99931524 0.99931524 0.99931524 0.99931524]
+GW190426_152155 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190720_000836_C01:SEOBNRv4PHM.fits [1.         0.99999974 1.         1.         1.         0.94256521] [0.9999837  0.9999837  0.9999837  0.9999837  0.9999837  0.99998345]
+IGWN-GWTC3p0-v1-GW191103_012549_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [0.99999997 0.99740238 0.72934254 0.99999662 0.99999998 1.        ] [1.0000023  0.99986889 0.76450008 1.0000023  1.0000023  1.0000023 ]
+GW191103_012549 GW190720_000836 Series([], Name: flarename, dtype: object)Series([], Name: flarename, dtype: object)
+
+Calculating background rate...Calculating background rate...
+
+GW190412_C01:SEOBNRv4PHM.fits [1. 1. 1. 1. 1. 1.] [1.0000031 1.0000031 1.0000031 1.0000031 1.0000031 1.0000031]
+GW190412 Series([], Name: flarename, dtype: object)
+GW190930_133541_C01:SEOBNRv4PHM.fits Calculating background rate...
+[1.         1.         1.         0.99599066 1.         1.        ] [1.00000258 1.00000258 1.00000258 1.00000258 1.00000258 1.00000258]
+GW190930_133541 GW190408_181802_C01:SEOBNRv4PHM.fits Series([], Name: flarename, dtype: object)
+[1. 1. 1. 1. 1. 1.] [1.0000035 1.0000035 1.0000035 1.0000035 1.0000035 1.0000035]
+Calculating background rate...
+GW190408_181802 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC2p1-v2-GW190925_232845_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [0.98623619 0.99407595 0.99463905 0.99997958 0.99208031 0.99761512] [0.99926882 0.99908154 0.99418746 0.99949343 0.99910917 0.99950231]
+GW190925_232845 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190708_232457_C01:SEOBNRv4PHM.fits [0.74014009 1.         0.99846234 0.99999966 0.4222093  0.9581921 ] [0.9999232  0.99992321 0.99992321 0.99992321 0.99992131 0.99992321]
+GW190708_232457 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW190425_C01:SEOBNRv4T_surrogate_HS.fits [0.6957723  0.95122136 0.98141634 0.99123819 0.84985929 0.70554328] [1.00005862 1.00005862 1.00005862 1.00005862 1.00005862 1.00005862]
+GW190425 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+******************************
+Index 53
 GW191129_134029
 Loading skymap...
+Loading flares...
+******************************
+Index 54
 GW191204_110529
 Loading skymap...
+Loading flares...
 ******************************
 Index 55
 GW191204_171526
 Loading skymap...
 Loading flares...
-Calculating background rate...
-Loading flares...Loading flares...
-
-Loading flares...
-Loading flares...
-Loading flares...
-Loading flares...
-Loading flares...
-Calculating background rate...
-Calculating background rate...
-Loading flares...
-Calculating background rate...
-Loading flares...
-Loading flares...
-Calculating background rate...
-Loading flares...
-Calculating background rate...
-Calculating background rate...
-Calculating background rate...
-Calculating background rate...
-Calculating background rate...
-Calculating background rate...
-Calculating background rate...
-Loading flares...
-Calculating background rate...
-Loading flares...
-Loading flares...
-Calculating background rate...
-Calculating background rate...
-Loading flares...
-Calculating background rate...
-Loading flares...
-Loading flares...
-Calculating background rate...
-Calculating background rate...
-Loading flares...
-Loading flares...
-Loading flares...
-Loading flares...
-Calculating background rate...
-Calculating background rate...
-Calculating background rate...
-Loading flares...
-Calculating background rate...
-Calculating background rate...
-Loading flares...
-Calculating background rate...
-Loading flares...
-Loading flares...
-Calculating background rate...
-Calculating background rate...
-Loading flares...
-Loading flares...Loading flares...
-
-Calculating background rate...
-Loading flares...
-Calculating background rate...Calculating background rate...
-
-Calculating background rate...
-Loading flares...
-Calculating background rate...
-Loading flares...
-Calculating background rate...
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
 ******************************
 Index 56
 GW191215_223052
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 57
 GW191216_213338
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 58
 GW191219_163120
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 61
 GW200105_162426
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 62
 GW200112_155838
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 63
 GW200115_042309
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 65
 GW200129_065458
 Loading skymap...
 Loading flares...
+IGWN-GWTC3p0-v1-GW191129_134029_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [0.41886549 0.99747414 1.         1.         1.         0.89493421] [1.0000013 1.0000013 1.0000013 1.0000013 1.0000013 1.0000013]
+GW191129_134029 Series([], Name: flarename, dtype: object)
 Calculating background rate...
 ******************************
 Index 66
 GW200202_154313
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 67
 GW200208_130117
 Loading skymap...
+Loading flares...
 ******************************
 Index 69
 GW200209_085452
 Loading skymap...
 Loading flares...
-Calculating background rate...
-Loading flares...
-Calculating background rate...
 ******************************
 Index 70
 GW200210_092254
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 72
 GW200219_094415
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 74
 GW200220_124850
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 76
 GW200225_060421
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 77
 GW200302_015811
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 78
 GW200306_093714
 Loading skymap...
 Loading flares...
+IGWN-GWTC3p0-v1-GW191204_110529_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [0.98873508 0.90645601 1.         1.         0.96126137 0.99848311] [0.98489031 0.99972406 0.99972406 0.99972406 0.93699052 0.99972392]
+GW191204_110529 Series([], Name: flarename, dtype: object)
 Calculating background rate...
 ******************************
 Index 80
 GW200311_115853
 Loading skymap...
 Loading flares...
-Calculating background rate...
 ******************************
 Index 81
 GW200316_215756
 Loading skymap...
 Loading flares...
-Calculating background rate...
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
 ******************************
 Index 82
 GW200322_091133
 Loading skymap...
 Loading flares...
+IGWN-GWTC3p0-v1-GW191215_223052_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [1.0000042 1.0000042 1.0000042 1.0000042 1.0000042 1.0000042]
+GW191215_223052 Series([], Name: flarename, dtype: object)
 Calculating background rate...
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: 'pct' did not parse as fits unit: At col 0, Unit 'pct' not supported by the FITS standard. Did you mean PC, PT, cT, ct, pC, pT or pc? If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
+IGWN-GWTC3p0-v1-GW191204_171526_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1.        1.        1.        0.9999096 1.        1.       ] [1.00000343 1.00000343 1.00000343 1.00000343 1.00000343 1.00000343]
+GW191204_171526 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW191219_163120_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM:HighSpin.fits [1.         1.         0.99643438 0.99999968 1.         0.43522486] [0.99990582 0.99990582 0.99990582 0.99990582 0.99990582 0.99990582]
+GW191219_163120 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW191216_213338_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [1.00001086 1.00001086 1.00001086 1.00001086 1.00001086 1.00001086]
+GW191216_213338 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200112_155838_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [0.89283968 0.20966212 0.99999578 0.99999916 0.9996895  0.83902019] [1.00000356 0.99474518 1.00000052 1.00000356 1.00000356 1.00000356]
+GW200112_155838 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200105_162426_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM:HighSpin.fits [1. 1. 1. 1. 1. 1.] [0.99996393 0.99996393 0.99996393 0.99996393 0.99996393 0.99996393]
+GW200105_162426 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200202_154313_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [0.99990631 0.99990631 0.99990631 0.99990631 0.99990631 0.99990631]
+GW200202_154313 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200115_042309_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM:HighSpin.fits [1. 1. 1. 1. 1. 1.] [1.0000131 1.0000131 1.0000131 1.0000131 1.0000131 1.0000131]
+GW200115_042309 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200208_130117_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [0.99786468 1.         0.99987195 0.9997574  0.9993686  0.99999914] [0.99760172 0.99973666 0.99972911 0.99922164 0.99973666 0.99973666]
+GW200208_130117 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200129_065458_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [1.00000349 1.00000349 1.00000349 1.00000349 1.00000349 1.00000349]
+GW200129_065458 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200302_015811_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1.         0.99719582 0.99999866 1.         0.99998171 1.        ] [0.99977179 0.99977179 0.99977179 0.99977179 0.99977179 0.99977179]
+GW200302_015811 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200209_085452_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [0.99974777 0.99974777 0.99974777 0.99974777 0.99974777 0.99974777]
+GW200209_085452 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200210_092254_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [0.31331761 0.99907494 0.99963855 0.9999495  0.99955836 0.83614854] [0.99896812 0.99896813 0.99896651 0.99896813 0.99896813 0.99896813]
+GW200210_092254 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200306_093714_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [0.9984743 0.9984743 0.9984743 0.9984743 0.9984743 0.9984743]
+GW200306_093714 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200220_124850_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1.         1.         0.99858559 0.99977863 1.         0.14508317] [0.99970907 0.99970907 0.99114378 0.99669523 0.99970907 0.14782409]
+GW200220_124850 5    J154342.46+461233.4
+Name: flarename, dtype: object
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200316_215756_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [0.99999748 0.99999748 0.99999748 0.99999748 0.99999748 0.99999748]
+GW200316_215756 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200225_060421_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [0.99998777 0.99998777 0.99998777 0.99998777 0.99998777 0.99998777]
+IGWN-GWTC3p0-v1-GW200219_094415_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1.         1.         1.         1.         0.75836707 1.        ] [1.00000448 1.00000448 1.00000448 1.00000448 0.73467169 1.00000448]
+GW200225_060421 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+GW200219_094415 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200322_091133_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [0.85574322 0.98494792 0.2536469  0.73502491 0.71128601 0.12299287] [0.01219484 0.01219484 0.01219484 0.01219484 0.01219484 0.01219484]
+GW200322_091133 Series([], Name: flarename, dtype: object)
+Calculating background rate...
+IGWN-GWTC3p0-v1-GW200311_115853_PEDataRelease_cosmo_reweight_C01:IMRPhenomXPHM.fits [1. 1. 1. 1. 1. 1.] [1.00000338 1.00000338 1.00000338 1.00000338 1.00000338 1.00000338]
+GW200311_115853 Series([], Name: flarename, dtype: object)
+Calculating background rate...
 /hildafs/projects/phy220048p/tcabrera/bbhagn/mycode/ligo.skymap/ligo/skymap/postprocess/crossmatch.py:459: RuntimeWarning: invalid value encountered in subtract
   contour_dists = (hi - lo).tolist()
 Calculating signal and background arrays...
 GW 0 has 0 coincident flares
 GW 1 has 0 coincident flares
 GW 2 has 0 coincident flares
-GW 3 has 0 coincident flares
+GW 3 has 2 coincident flares
 GW 4 has 0 coincident flares
 GW 5 has 0 coincident flares
 GW 6 has 0 coincident flares
@@ -402,13 +514,13 @@ GW 11 has 0 coincident flares
 GW 12 has 0 coincident flares
 GW 13 has 0 coincident flares
 GW 14 has 0 coincident flares
-GW 15 has 1 coincident flares
+GW 15 has 0 coincident flares
 GW 16 has 0 coincident flares
-GW 17 has 0 coincident flares
+GW 17 has 1 coincident flares
 GW 18 has 0 coincident flares
 GW 19 has 0 coincident flares
 GW 20 has 0 coincident flares
-GW 21 has 0 coincident flares
+GW 21 has 1 coincident flares
 GW 22 has 0 coincident flares
 GW 23 has 0 coincident flares
 GW 24 has 0 coincident flares
@@ -431,79 +543,82 @@ GW 40 has 0 coincident flares
 GW 41 has 0 coincident flares
 GW 42 has 0 coincident flares
 GW 43 has 0 coincident flares
-GW 44 has 1 coincident flares
+GW 44 has 0 coincident flares
 GW 45 has 0 coincident flares
 GW 46 has 0 coincident flares
-GW 47 has 0 coincident flares
+GW 47 has 1 coincident flares
 GW 48 has 0 coincident flares
 GW 49 has 0 coincident flares
 GW 50 has 0 coincident flares
+GW 51 has 0 coincident flares
+GW 52 has 0 coincident flares
+GW 53 has 0 coincident flares
 ******************** MCMC ********************
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-  0%|          | 0/5000 [00:00<?, ?it/s]/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+  0%|          | 0/5000 [00:00<?, ?it/s]/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:92: RuntimeWarning: All-NaN slice encountered
+/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/utils/inference.py:135: RuntimeWarning: All-NaN slice encountered
   max_n_agn = np.nanmax([np.nanmax(n) for n in n_agns if len(n) > 0])
-  0%|          | 7/5000 [00:00<01:21, 61.04it/s]  0%|          | 14/5000 [00:00<01:21, 61.45it/s]  0%|          | 21/5000 [00:00<01:17, 64.05it/s]  1%|          | 28/5000 [00:00<01:20, 61.72it/s]  1%|          | 35/5000 [00:00<01:21, 61.19it/s]  1%|          | 42/5000 [00:00<01:21, 60.52it/s]  1%|          | 49/5000 [00:00<01:24, 58.91it/s]  1%|          | 56/5000 [00:00<01:21, 60.30it/s]  1%|▏         | 64/5000 [00:01<01:17, 63.91it/s]  1%|▏         | 72/5000 [00:01<01:13, 66.68it/s]  2%|▏         | 80/5000 [00:01<01:11, 68.63it/s]  2%|▏         | 88/5000 [00:01<01:09, 70.36it/s]  2%|▏         | 96/5000 [00:01<01:08, 71.47it/s]  2%|▏         | 104/5000 [00:01<01:08, 71.27it/s]  2%|▏         | 112/5000 [00:01<01:08, 71.42it/s]  2%|▏         | 120/5000 [00:01<01:08, 71.34it/s]  3%|▎         | 128/5000 [00:01<01:09, 70.30it/s]  3%|▎         | 136/5000 [00:02<01:08, 71.13it/s]  3%|▎         | 144/5000 [00:02<01:07, 72.12it/s]  3%|▎         | 152/5000 [00:02<01:07, 72.06it/s]  3%|▎         | 160/5000 [00:02<01:07, 71.61it/s]  3%|▎         | 168/5000 [00:02<01:08, 71.04it/s]  4%|▎         | 176/5000 [00:02<01:07, 71.61it/s]  4%|▎         | 184/5000 [00:02<01:07, 71.21it/s]  4%|▍         | 192/5000 [00:02<01:06, 71.79it/s]  4%|▍         | 200/5000 [00:02<01:08, 69.73it/s]  4%|▍         | 208/5000 [00:03<01:07, 70.58it/s]  4%|▍         | 216/5000 [00:03<01:09, 69.14it/s]  4%|▍         | 223/5000 [00:03<01:09, 69.04it/s]  5%|▍         | 231/5000 [00:03<01:06, 71.53it/s]  5%|▍         | 239/5000 [00:03<01:07, 70.84it/s]  5%|▍         | 247/5000 [00:03<01:07, 70.65it/s]  5%|▌         | 255/5000 [00:03<01:06, 71.56it/s]  5%|▌         | 264/5000 [00:03<01:03, 75.05it/s]  5%|▌         | 273/5000 [00:03<01:01, 77.12it/s]  6%|▌         | 282/5000 [00:04<01:00, 78.30it/s]  6%|▌         | 290/5000 [00:04<01:00, 78.44it/s]  6%|▌         | 299/5000 [00:04<00:58, 80.13it/s]  6%|▌         | 308/5000 [00:04<00:58, 80.11it/s]  6%|▋         | 317/5000 [00:04<01:00, 77.63it/s]  6%|▋         | 325/5000 [00:04<01:01, 75.93it/s]  7%|▋         | 333/5000 [00:04<01:00, 76.83it/s]  7%|▋         | 342/5000 [00:04<00:59, 78.02it/s]  7%|▋         | 351/5000 [00:04<00:58, 79.16it/s]  7%|▋         | 360/5000 [00:05<00:58, 79.45it/s]  7%|▋         | 368/5000 [00:05<00:59, 77.95it/s]  8%|▊         | 376/5000 [00:05<00:59, 77.09it/s]  8%|▊         | 384/5000 [00:05<01:00, 76.53it/s]  8%|▊         | 392/5000 [00:05<01:00, 76.71it/s]  8%|▊         | 401/5000 [00:05<00:59, 77.92it/s]  8%|▊         | 409/5000 [00:05<00:59, 77.66it/s]  8%|▊         | 418/5000 [00:05<00:58, 78.49it/s]  9%|▊         | 426/5000 [00:05<00:57, 78.90it/s]  9%|▊         | 435/5000 [00:05<00:57, 79.48it/s]  9%|▉         | 444/5000 [00:06<00:56, 80.36it/s]  9%|▉         | 453/5000 [00:06<00:57, 79.05it/s]  9%|▉         | 461/5000 [00:06<00:57, 78.95it/s]  9%|▉         | 469/5000 [00:06<00:57, 79.05it/s] 10%|▉         | 478/5000 [00:06<00:56, 79.73it/s] 10%|▉         | 487/5000 [00:06<00:56, 80.08it/s] 10%|▉         | 496/5000 [00:06<00:56, 79.05it/s] 10%|█         | 504/5000 [00:06<00:56, 78.97it/s] 10%|█         | 512/5000 [00:06<00:57, 78.70it/s] 10%|█         | 521/5000 [00:07<00:56, 79.23it/s] 11%|█         | 530/5000 [00:07<00:56, 79.81it/s] 11%|█         | 539/5000 [00:07<00:55, 81.06it/s] 11%|█         | 548/5000 [00:07<00:55, 80.73it/s] 11%|█         | 557/5000 [00:07<00:56, 78.72it/s] 11%|█▏        | 565/5000 [00:07<00:56, 78.70it/s] 11%|█▏        | 573/5000 [00:07<00:57, 77.21it/s] 12%|█▏        | 582/5000 [00:07<00:55, 78.91it/s] 12%|█▏        | 591/5000 [00:07<00:55, 79.64it/s] 12%|█▏        | 600/5000 [00:08<00:54, 80.56it/s] 12%|█▏        | 609/5000 [00:08<00:54, 81.18it/s] 12%|█▏        | 618/5000 [00:08<00:53, 81.38it/s] 13%|█▎        | 627/5000 [00:08<00:54, 80.16it/s] 13%|█▎        | 636/5000 [00:08<00:54, 79.75it/s] 13%|█▎        | 644/5000 [00:08<00:54, 79.27it/s] 13%|█▎        | 652/5000 [00:08<00:55, 78.86it/s] 13%|█▎        | 661/5000 [00:08<00:54, 79.41it/s] 13%|█▎        | 669/5000 [00:08<00:54, 79.26it/s] 14%|█▎        | 677/5000 [00:09<00:54, 78.61it/s] 14%|█▎        | 686/5000 [00:09<00:54, 79.56it/s] 14%|█▍        | 695/5000 [00:09<00:53, 80.00it/s] 14%|█▍        | 704/5000 [00:09<00:53, 80.43it/s] 14%|█▍        | 713/5000 [00:09<00:54, 77.97it/s] 14%|█▍        | 721/5000 [00:09<00:55, 77.36it/s] 15%|█▍        | 729/5000 [00:09<00:56, 76.07it/s] 15%|█▍        | 737/5000 [00:09<00:55, 76.87it/s] 15%|█▍        | 745/5000 [00:09<00:54, 77.48it/s] 15%|█▌        | 753/5000 [00:10<00:54, 78.06it/s] 15%|█▌        | 761/5000 [00:10<00:54, 77.68it/s] 15%|█▌        | 769/5000 [00:10<00:55, 75.70it/s] 16%|█▌        | 777/5000 [00:10<00:55, 75.58it/s] 16%|█▌        | 785/5000 [00:10<00:56, 75.25it/s] 16%|█▌        | 793/5000 [00:10<00:54, 76.53it/s] 16%|█▌        | 801/5000 [00:10<00:55, 76.24it/s] 16%|█▌        | 809/5000 [00:10<00:56, 74.60it/s] 16%|█▋        | 817/5000 [00:10<00:56, 74.47it/s] 16%|█▋        | 825/5000 [00:10<00:55, 75.34it/s] 17%|█▋        | 833/5000 [00:11<00:54, 76.18it/s] 17%|█▋        | 842/5000 [00:11<00:53, 77.79it/s] 17%|█▋        | 851/5000 [00:11<00:52, 78.88it/s] 17%|█▋        | 859/5000 [00:11<00:52, 78.74it/s] 17%|█▋        | 867/5000 [00:11<00:52, 78.74it/s] 18%|█▊        | 876/5000 [00:11<00:51, 80.02it/s] 18%|█▊        | 884/5000 [00:11<00:55, 74.19it/s] 18%|█▊        | 892/5000 [00:11<00:56, 73.05it/s] 18%|█▊        | 900/5000 [00:11<00:56, 72.85it/s] 18%|█▊        | 908/5000 [00:12<00:55, 74.36it/s] 18%|█▊        | 916/5000 [00:12<00:54, 75.49it/s] 18%|█▊        | 925/5000 [00:12<00:52, 77.18it/s] 19%|█▊        | 934/5000 [00:12<00:51, 78.38it/s] 19%|█▉        | 942/5000 [00:12<00:51, 78.49it/s] 19%|█▉        | 950/5000 [00:12<00:51, 78.57it/s] 19%|█▉        | 958/5000 [00:12<00:51, 78.03it/s] 19%|█▉        | 966/5000 [00:12<00:51, 78.59it/s] 19%|█▉        | 974/5000 [00:12<00:51, 78.52it/s] 20%|█▉        | 983/5000 [00:13<00:50, 79.85it/s] 20%|█▉        | 992/5000 [00:13<00:49, 81.20it/s] 20%|██        | 1001/5000 [00:13<00:48, 82.25it/s] 20%|██        | 1010/5000 [00:13<00:48, 81.81it/s] 20%|██        | 1019/5000 [00:13<00:48, 81.50it/s] 21%|██        | 1028/5000 [00:13<00:49, 80.48it/s] 21%|██        | 1037/5000 [00:13<00:49, 80.00it/s] 21%|██        | 1046/5000 [00:13<00:49, 80.23it/s] 21%|██        | 1055/5000 [00:13<00:49, 79.49it/s] 21%|██▏       | 1064/5000 [00:14<00:49, 79.56it/s] 21%|██▏       | 1072/5000 [00:14<00:50, 78.21it/s] 22%|██▏       | 1080/5000 [00:14<00:50, 77.92it/s] 22%|██▏       | 1088/5000 [00:14<00:50, 78.24it/s] 22%|██▏       | 1097/5000 [00:14<00:49, 79.05it/s] 22%|██▏       | 1106/5000 [00:14<00:48, 79.48it/s] 22%|██▏       | 1115/5000 [00:14<00:48, 79.95it/s] 22%|██▏       | 1123/5000 [00:14<00:49, 77.64it/s] 23%|██▎       | 1132/5000 [00:14<00:48, 79.54it/s] 23%|██▎       | 1140/5000 [00:14<00:49, 78.66it/s] 23%|██▎       | 1149/5000 [00:15<00:48, 79.91it/s] 23%|██▎       | 1158/5000 [00:15<00:47, 80.11it/s] 23%|██▎       | 1167/5000 [00:15<00:48, 78.77it/s] 24%|██▎       | 1175/5000 [00:15<00:48, 78.28it/s] 24%|██▎       | 1183/5000 [00:15<00:48, 77.90it/s] 24%|██▍       | 1191/5000 [00:15<00:49, 76.80it/s] 24%|██▍       | 1199/5000 [00:15<00:49, 76.35it/s] 24%|██▍       | 1207/5000 [00:15<00:49, 76.55it/s] 24%|██▍       | 1216/5000 [00:15<00:48, 78.43it/s] 24%|██▍       | 1224/5000 [00:16<00:48, 78.06it/s] 25%|██▍       | 1232/5000 [00:16<00:49, 76.52it/s] 25%|██▍       | 1240/5000 [00:16<00:49, 76.62it/s] 25%|██▍       | 1248/5000 [00:16<00:49, 75.78it/s] 25%|██▌       | 1257/5000 [00:16<00:48, 77.28it/s] 25%|██▌       | 1266/5000 [00:16<00:47, 78.28it/s] 25%|██▌       | 1274/5000 [00:16<00:47, 78.16it/s] 26%|██▌       | 1282/5000 [00:16<00:49, 74.56it/s] 26%|██▌       | 1291/5000 [00:16<00:48, 76.93it/s] 26%|██▌       | 1299/5000 [00:17<00:47, 77.38it/s] 26%|██▌       | 1307/5000 [00:17<00:47, 77.44it/s] 26%|██▋       | 1315/5000 [00:17<00:48, 76.25it/s] 26%|██▋       | 1323/5000 [00:17<00:47, 76.98it/s] 27%|██▋       | 1332/5000 [00:17<00:46, 78.15it/s] 27%|██▋       | 1340/5000 [00:17<00:46, 78.18it/s] 27%|██▋       | 1349/5000 [00:17<00:46, 79.30it/s] 27%|██▋       | 1357/5000 [00:17<00:48, 75.86it/s] 27%|██▋       | 1365/5000 [00:17<00:48, 74.68it/s] 27%|██▋       | 1373/5000 [00:18<00:48, 74.51it/s] 28%|██▊       | 1381/5000 [00:18<00:48, 74.07it/s] 28%|██▊       | 1389/5000 [00:18<00:48, 74.85it/s] 28%|██▊       | 1398/5000 [00:18<00:46, 76.91it/s] 28%|██▊       | 1406/5000 [00:18<00:47, 76.03it/s] 28%|██▊       | 1414/5000 [00:18<00:47, 74.87it/s] 28%|██▊       | 1422/5000 [00:18<00:47, 75.86it/s] 29%|██▊       | 1430/5000 [00:18<00:47, 75.83it/s] 29%|██▉       | 1438/5000 [00:18<00:46, 76.34it/s] 29%|██▉       | 1447/5000 [00:18<00:45, 78.06it/s] 29%|██▉       | 1455/5000 [00:19<00:45, 78.11it/s] 29%|██▉       | 1463/5000 [00:19<00:45, 77.89it/s] 29%|██▉       | 1472/5000 [00:19<00:44, 78.64it/s] 30%|██▉       | 1480/5000 [00:19<00:44, 78.85it/s] 30%|██▉       | 1489/5000 [00:19<00:44, 79.37it/s] 30%|██▉       | 1497/5000 [00:19<00:44, 79.33it/s] 30%|███       | 1506/5000 [00:19<00:43, 79.87it/s] 30%|███       | 1514/5000 [00:19<00:45, 76.05it/s] 30%|███       | 1522/5000 [00:19<00:45, 76.17it/s] 31%|███       | 1530/5000 [00:20<00:45, 76.80it/s] 31%|███       | 1539/5000 [00:20<00:44, 77.90it/s] 31%|███       | 1548/5000 [00:20<00:43, 78.64it/s] 31%|███       | 1556/5000 [00:20<00:43, 78.70it/s] 31%|███▏      | 1564/5000 [00:20<00:44, 77.57it/s] 31%|███▏      | 1572/5000 [00:20<00:44, 77.36it/s] 32%|███▏      | 1581/5000 [00:20<00:43, 78.61it/s] 32%|███▏      | 1589/5000 [00:20<00:43, 77.90it/s] 32%|███▏      | 1597/5000 [00:20<00:44, 76.22it/s] 32%|███▏      | 1605/5000 [00:20<00:44, 76.39it/s] 32%|███▏      | 1613/5000 [00:21<00:44, 76.01it/s] 32%|███▏      | 1622/5000 [00:21<00:43, 77.88it/s] 33%|███▎      | 1630/5000 [00:21<00:43, 77.96it/s] 33%|███▎      | 1638/5000 [00:21<00:42, 78.37it/s] 33%|███▎      | 1646/5000 [00:21<00:42, 78.39it/s] 33%|███▎      | 1655/5000 [00:21<00:42, 79.55it/s] 33%|███▎      | 1663/5000 [00:21<00:43, 77.40it/s] 33%|███▎      | 1671/5000 [00:21<00:43, 77.25it/s] 34%|███▎      | 1679/5000 [00:21<00:43, 76.14it/s] 34%|███▎      | 1687/5000 [00:22<00:43, 75.62it/s] 34%|███▍      | 1695/5000 [00:22<00:43, 76.48it/s] 34%|███▍      | 1704/5000 [00:22<00:42, 77.92it/s] 34%|███▍      | 1713/5000 [00:22<00:41, 78.85it/s] 34%|███▍      | 1722/5000 [00:22<00:41, 79.84it/s] 35%|███▍      | 1731/5000 [00:22<00:40, 80.53it/s] 35%|███▍      | 1740/5000 [00:22<00:40, 81.50it/s] 35%|███▍      | 1749/5000 [00:22<00:41, 78.91it/s] 35%|███▌      | 1757/5000 [00:22<00:41, 78.84it/s] 35%|███▌      | 1765/5000 [00:23<00:41, 77.39it/s] 35%|███▌      | 1773/5000 [00:23<00:41, 76.99it/s] 36%|███▌      | 1781/5000 [00:23<00:41, 76.82it/s] 36%|███▌      | 1789/5000 [00:23<00:42, 76.21it/s] 36%|███▌      | 1797/5000 [00:23<00:41, 77.13it/s] 36%|███▌      | 1805/5000 [00:23<00:41, 77.08it/s] 36%|███▋      | 1813/5000 [00:23<00:41, 75.96it/s] 36%|███▋      | 1821/5000 [00:23<00:41, 76.63it/s] 37%|███▋      | 1829/5000 [00:23<00:41, 76.46it/s] 37%|███▋      | 1838/5000 [00:23<00:40, 77.95it/s] 37%|███▋      | 1846/5000 [00:24<00:40, 78.17it/s] 37%|███▋      | 1854/5000 [00:24<00:40, 77.64it/s] 37%|███▋      | 1863/5000 [00:24<00:39, 78.64it/s] 37%|███▋      | 1871/5000 [00:24<00:39, 78.79it/s] 38%|███▊      | 1879/5000 [00:24<00:39, 79.01it/s] 38%|███▊      | 1887/5000 [00:24<00:39, 78.74it/s] 38%|███▊      | 1896/5000 [00:24<00:38, 79.91it/s] 38%|███▊      | 1905/5000 [00:24<00:38, 79.88it/s] 38%|███▊      | 1914/5000 [00:24<00:38, 79.42it/s] 38%|███▊      | 1922/5000 [00:25<00:38, 79.16it/s] 39%|███▊      | 1930/5000 [00:25<00:38, 79.29it/s] 39%|███▉      | 1938/5000 [00:25<00:39, 77.86it/s] 39%|███▉      | 1946/5000 [00:25<00:39, 77.50it/s] 39%|███▉      | 1954/5000 [00:25<00:39, 76.49it/s] 39%|███▉      | 1962/5000 [00:25<00:41, 73.80it/s] 39%|███▉      | 1970/5000 [00:25<00:41, 73.72it/s] 40%|███▉      | 1978/5000 [00:25<00:40, 74.54it/s] 40%|███▉      | 1986/5000 [00:25<00:40, 74.92it/s] 40%|███▉      | 1994/5000 [00:26<00:39, 75.65it/s] 40%|████      | 2002/5000 [00:26<00:39, 76.49it/s] 40%|████      | 2011/5000 [00:26<00:38, 78.62it/s] 40%|████      | 2020/5000 [00:26<00:37, 80.39it/s] 41%|████      | 2029/5000 [00:26<00:36, 80.52it/s] 41%|████      | 2038/5000 [00:26<00:37, 79.98it/s] 41%|████      | 2047/5000 [00:26<00:36, 81.03it/s] 41%|████      | 2056/5000 [00:26<00:36, 80.77it/s] 41%|████▏     | 2065/5000 [00:26<00:36, 80.44it/s] 41%|████▏     | 2074/5000 [00:26<00:36, 81.21it/s] 42%|████▏     | 2083/5000 [00:27<00:36, 81.00it/s] 42%|████▏     | 2092/5000 [00:27<00:35, 81.18it/s] 42%|████▏     | 2101/5000 [00:27<00:35, 80.75it/s] 42%|████▏     | 2110/5000 [00:27<00:36, 79.42it/s] 42%|████▏     | 2119/5000 [00:27<00:36, 79.40it/s] 43%|████▎     | 2127/5000 [00:27<00:36, 78.19it/s] 43%|████▎     | 2135/5000 [00:27<00:37, 77.06it/s] 43%|████▎     | 2143/5000 [00:27<00:38, 75.07it/s] 43%|████▎     | 2151/5000 [00:27<00:37, 75.57it/s] 43%|████▎     | 2159/5000 [00:28<00:37, 76.36it/s] 43%|████▎     | 2167/5000 [00:28<00:36, 77.27it/s] 44%|████▎     | 2176/5000 [00:28<00:35, 79.20it/s] 44%|████▎     | 2185/5000 [00:28<00:35, 79.99it/s] 44%|████▍     | 2193/5000 [00:28<00:35, 79.90it/s] 44%|████▍     | 2201/5000 [00:28<00:35, 79.64it/s] 44%|████▍     | 2210/5000 [00:28<00:34, 79.94it/s] 44%|████▍     | 2218/5000 [00:28<00:35, 78.81it/s] 45%|████▍     | 2226/5000 [00:28<00:35, 79.12it/s] 45%|████▍     | 2235/5000 [00:29<00:34, 79.67it/s] 45%|████▍     | 2243/5000 [00:29<00:34, 79.36it/s] 45%|████▌     | 2251/5000 [00:29<00:34, 79.36it/s] 45%|████▌     | 2259/5000 [00:29<00:34, 78.50it/s] 45%|████▌     | 2268/5000 [00:29<00:34, 79.18it/s] 46%|████▌     | 2276/5000 [00:29<00:34, 78.47it/s] 46%|████▌     | 2284/5000 [00:29<00:34, 78.78it/s] 46%|████▌     | 2292/5000 [00:29<00:34, 79.03it/s] 46%|████▌     | 2300/5000 [00:29<00:34, 78.70it/s] 46%|████▌     | 2309/5000 [00:29<00:33, 79.78it/s] 46%|████▋     | 2318/5000 [00:30<00:33, 80.16it/s] 47%|████▋     | 2327/5000 [00:30<00:33, 79.80it/s] 47%|████▋     | 2335/5000 [00:30<00:34, 78.13it/s] 47%|████▋     | 2343/5000 [00:30<00:34, 78.02it/s] 47%|████▋     | 2351/5000 [00:30<00:34, 76.02it/s] 47%|████▋     | 2359/5000 [00:30<00:34, 76.41it/s] 47%|████▋     | 2367/5000 [00:30<00:34, 76.90it/s] 48%|████▊     | 2375/5000 [00:30<00:35, 74.19it/s] 48%|████▊     | 2383/5000 [00:30<00:35, 74.54it/s] 48%|████▊     | 2391/5000 [00:31<00:34, 75.13it/s] 48%|████▊     | 2399/5000 [00:31<00:34, 75.06it/s] 48%|████▊     | 2407/5000 [00:31<00:34, 74.45it/s] 48%|████▊     | 2416/5000 [00:31<00:33, 76.52it/s] 48%|████▊     | 2424/5000 [00:31<00:33, 77.40it/s] 49%|████▊     | 2432/5000 [00:31<00:33, 76.23it/s] 49%|████▉     | 2441/5000 [00:31<00:32, 78.20it/s] 49%|████▉     | 2449/5000 [00:31<00:32, 77.44it/s] 49%|████▉     | 2457/5000 [00:31<00:33, 76.77it/s] 49%|████▉     | 2465/5000 [00:32<00:32, 77.02it/s] 49%|████▉     | 2473/5000 [00:32<00:32, 76.74it/s] 50%|████▉     | 2481/5000 [00:32<00:33, 76.06it/s] 50%|████▉     | 2489/5000 [00:32<00:33, 74.85it/s] 50%|████▉     | 2497/5000 [00:32<00:33, 75.09it/s] 50%|█████     | 2505/5000 [00:32<00:32, 75.65it/s] 50%|█████     | 2514/5000 [00:32<00:32, 77.26it/s] 50%|█████     | 2523/5000 [00:32<00:31, 78.27it/s] 51%|█████     | 2531/5000 [00:32<00:32, 75.53it/s] 51%|█████     | 2540/5000 [00:33<00:31, 77.07it/s] 51%|█████     | 2548/5000 [00:33<00:32, 76.39it/s] 51%|█████     | 2556/5000 [00:33<00:31, 77.25it/s] 51%|█████▏    | 2564/5000 [00:33<00:31, 77.90it/s] 51%|█████▏    | 2572/5000 [00:33<00:31, 78.32it/s] 52%|█████▏    | 2581/5000 [00:33<00:30, 79.46it/s] 52%|█████▏    | 2589/5000 [00:33<00:30, 79.36it/s] 52%|█████▏    | 2597/5000 [00:33<00:30, 78.28it/s] 52%|█████▏    | 2605/5000 [00:33<00:31, 76.66it/s] 52%|█████▏    | 2613/5000 [00:33<00:31, 76.29it/s] 52%|█████▏    | 2622/5000 [00:34<00:30, 78.40it/s] 53%|█████▎    | 2630/5000 [00:34<00:30, 77.92it/s] 53%|█████▎    | 2638/5000 [00:34<00:30, 77.18it/s] 53%|█████▎    | 2646/5000 [00:34<00:30, 76.86it/s] 53%|█████▎    | 2655/5000 [00:34<00:29, 78.42it/s] 53%|█████▎    | 2664/5000 [00:34<00:29, 78.97it/s] 53%|█████▎    | 2672/5000 [00:34<00:29, 78.34it/s] 54%|█████▎    | 2680/5000 [00:34<00:30, 76.97it/s] 54%|█████▍    | 2688/5000 [00:34<00:30, 76.73it/s] 54%|█████▍    | 2697/5000 [00:35<00:29, 79.09it/s] 54%|█████▍    | 2706/5000 [00:35<00:28, 80.44it/s] 54%|█████▍    | 2715/5000 [00:35<00:27, 81.61it/s] 54%|█████▍    | 2724/5000 [00:35<00:27, 81.81it/s] 55%|█████▍    | 2733/5000 [00:35<00:28, 80.64it/s] 55%|█████▍    | 2742/5000 [00:35<00:29, 77.15it/s] 55%|█████▌    | 2750/5000 [00:35<00:29, 76.71it/s] 55%|█████▌    | 2758/5000 [00:35<00:29, 76.33it/s] 55%|█████▌    | 2766/5000 [00:35<00:29, 76.64it/s] 56%|█████▌    | 2775/5000 [00:36<00:28, 78.53it/s] 56%|█████▌    | 2784/5000 [00:36<00:27, 79.32it/s] 56%|█████▌    | 2792/5000 [00:36<00:28, 78.35it/s] 56%|█████▌    | 2800/5000 [00:36<00:28, 77.83it/s] 56%|█████▌    | 2809/5000 [00:36<00:27, 78.97it/s] 56%|█████▋    | 2818/5000 [00:36<00:27, 79.70it/s] 57%|█████▋    | 2827/5000 [00:36<00:26, 80.94it/s] 57%|█████▋    | 2836/5000 [00:36<00:26, 81.17it/s] 57%|█████▋    | 2845/5000 [00:36<00:26, 82.02it/s] 57%|█████▋    | 2854/5000 [00:36<00:26, 81.45it/s] 57%|█████▋    | 2863/5000 [00:37<00:26, 80.11it/s] 57%|█████▋    | 2872/5000 [00:37<00:27, 78.69it/s] 58%|█████▊    | 2880/5000 [00:37<00:27, 78.13it/s] 58%|█████▊    | 2889/5000 [00:37<00:26, 79.90it/s] 58%|█████▊    | 2897/5000 [00:37<00:26, 79.15it/s] 58%|█████▊    | 2905/5000 [00:37<00:26, 79.29it/s] 58%|█████▊    | 2913/5000 [00:37<00:26, 79.11it/s] 58%|█████▊    | 2921/5000 [00:37<00:26, 78.89it/s] 59%|█████▊    | 2929/5000 [00:37<00:26, 77.39it/s] 59%|█████▊    | 2937/5000 [00:38<00:27, 75.78it/s] 59%|█████▉    | 2945/5000 [00:38<00:27, 75.82it/s] 59%|█████▉    | 2953/5000 [00:38<00:27, 75.79it/s] 59%|█████▉    | 2961/5000 [00:38<00:27, 75.36it/s] 59%|█████▉    | 2969/5000 [00:38<00:27, 74.81it/s] 60%|█████▉    | 2977/5000 [00:38<00:26, 75.30it/s] 60%|█████▉    | 2986/5000 [00:38<00:25, 77.47it/s] 60%|█████▉    | 2994/5000 [00:38<00:26, 77.07it/s] 60%|██████    | 3002/5000 [00:38<00:26, 76.03it/s] 60%|██████    | 3010/5000 [00:39<00:26, 74.87it/s] 60%|██████    | 3018/5000 [00:39<00:26, 75.91it/s] 61%|██████    | 3027/5000 [00:39<00:25, 77.18it/s] 61%|██████    | 3035/5000 [00:39<00:25, 77.21it/s] 61%|██████    | 3043/5000 [00:39<00:25, 76.99it/s] 61%|██████    | 3051/5000 [00:39<00:25, 77.38it/s] 61%|██████    | 3059/5000 [00:39<00:24, 78.00it/s] 61%|██████▏   | 3067/5000 [00:39<00:25, 76.95it/s] 62%|██████▏   | 3075/5000 [00:39<00:26, 73.73it/s] 62%|██████▏   | 3083/5000 [00:39<00:25, 74.36it/s] 62%|██████▏   | 3092/5000 [00:40<00:25, 76.29it/s] 62%|██████▏   | 3100/5000 [00:40<00:24, 77.23it/s] 62%|██████▏   | 3108/5000 [00:40<00:24, 77.05it/s] 62%|██████▏   | 3116/5000 [00:40<00:24, 76.83it/s] 62%|██████▏   | 3124/5000 [00:40<00:24, 76.30it/s] 63%|██████▎   | 3132/5000 [00:40<00:24, 75.85it/s] 63%|██████▎   | 3140/5000 [00:40<00:24, 76.93it/s] 63%|██████▎   | 3148/5000 [00:40<00:25, 74.02it/s] 63%|██████▎   | 3156/5000 [00:40<00:24, 75.42it/s] 63%|██████▎   | 3164/5000 [00:41<00:24, 75.96it/s] 63%|██████▎   | 3172/5000 [00:41<00:24, 75.43it/s] 64%|██████▎   | 3180/5000 [00:41<00:24, 75.43it/s] 64%|██████▍   | 3188/5000 [00:41<00:23, 76.11it/s] 64%|██████▍   | 3196/5000 [00:41<00:23, 76.01it/s] 64%|██████▍   | 3204/5000 [00:41<00:24, 74.61it/s] 64%|██████▍   | 3212/5000 [00:41<00:24, 74.29it/s] 64%|██████▍   | 3220/5000 [00:41<00:23, 75.34it/s] 65%|██████▍   | 3228/5000 [00:41<00:23, 75.03it/s] 65%|██████▍   | 3236/5000 [00:42<00:24, 73.24it/s] 65%|██████▍   | 3244/5000 [00:42<00:24, 70.58it/s] 65%|██████▌   | 3252/5000 [00:42<00:24, 72.69it/s] 65%|██████▌   | 3261/5000 [00:42<00:23, 74.93it/s] 65%|██████▌   | 3269/5000 [00:42<00:23, 75.01it/s] 66%|██████▌   | 3277/5000 [00:42<00:22, 75.54it/s] 66%|██████▌   | 3286/5000 [00:42<00:22, 76.98it/s] 66%|██████▌   | 3295/5000 [00:42<00:21, 78.64it/s] 66%|██████▌   | 3304/5000 [00:42<00:21, 79.54it/s] 66%|██████▋   | 3313/5000 [00:42<00:21, 80.13it/s] 66%|██████▋   | 3322/5000 [00:43<00:21, 79.54it/s] 67%|██████▋   | 3331/5000 [00:43<00:20, 80.16it/s] 67%|██████▋   | 3340/5000 [00:43<00:20, 80.84it/s] 67%|██████▋   | 3349/5000 [00:43<00:20, 80.20it/s] 67%|██████▋   | 3358/5000 [00:43<00:20, 81.17it/s] 67%|██████▋   | 3367/5000 [00:43<00:20, 79.86it/s] 68%|██████▊   | 3376/5000 [00:43<00:20, 80.17it/s] 68%|██████▊   | 3385/5000 [00:43<00:20, 79.99it/s] 68%|██████▊   | 3394/5000 [00:44<00:19, 80.63it/s] 68%|██████▊   | 3403/5000 [00:44<00:19, 81.14it/s] 68%|██████▊   | 3412/5000 [00:44<00:19, 81.88it/s] 68%|██████▊   | 3421/5000 [00:44<00:19, 82.64it/s] 69%|██████▊   | 3430/5000 [00:44<00:19, 82.32it/s] 69%|██████▉   | 3439/5000 [00:44<00:19, 81.66it/s] 69%|██████▉   | 3448/5000 [00:44<00:19, 80.91it/s] 69%|██████▉   | 3457/5000 [00:44<00:18, 81.27it/s] 69%|██████▉   | 3466/5000 [00:44<00:18, 81.41it/s] 70%|██████▉   | 3475/5000 [00:44<00:18, 81.16it/s] 70%|██████▉   | 3484/5000 [00:45<00:18, 81.50it/s] 70%|██████▉   | 3493/5000 [00:45<00:18, 81.75it/s] 70%|███████   | 3502/5000 [00:45<00:18, 82.09it/s] 70%|███████   | 3511/5000 [00:45<00:17, 83.09it/s] 70%|███████   | 3520/5000 [00:45<00:18, 82.11it/s] 71%|███████   | 3529/5000 [00:45<00:17, 81.80it/s] 71%|███████   | 3538/5000 [00:45<00:17, 81.44it/s] 71%|███████   | 3547/5000 [00:45<00:17, 81.75it/s] 71%|███████   | 3556/5000 [00:45<00:17, 81.43it/s] 71%|███████▏  | 3565/5000 [00:46<00:17, 82.39it/s] 71%|███████▏  | 3574/5000 [00:46<00:17, 81.61it/s] 72%|███████▏  | 3583/5000 [00:46<00:17, 81.42it/s] 72%|███████▏  | 3592/5000 [00:46<00:17, 81.69it/s] 72%|███████▏  | 3601/5000 [00:46<00:17, 81.08it/s] 72%|███████▏  | 3610/5000 [00:46<00:17, 80.99it/s] 72%|███████▏  | 3619/5000 [00:46<00:16, 81.42it/s] 73%|███████▎  | 3628/5000 [00:46<00:16, 82.73it/s] 73%|███████▎  | 3637/5000 [00:46<00:16, 82.50it/s] 73%|███████▎  | 3646/5000 [00:47<00:16, 82.30it/s] 73%|███████▎  | 3655/5000 [00:47<00:16, 82.18it/s] 73%|███████▎  | 3664/5000 [00:47<00:16, 81.53it/s] 73%|███████▎  | 3673/5000 [00:47<00:16, 81.37it/s] 74%|███████▎  | 3682/5000 [00:47<00:16, 80.89it/s] 74%|███████▍  | 3691/5000 [00:47<00:16, 81.69it/s] 74%|███████▍  | 3700/5000 [00:47<00:16, 80.79it/s] 74%|███████▍  | 3709/5000 [00:47<00:15, 81.47it/s] 74%|███████▍  | 3718/5000 [00:47<00:15, 82.70it/s] 75%|███████▍  | 3727/5000 [00:48<00:15, 82.80it/s] 75%|███████▍  | 3736/5000 [00:48<00:15, 81.85it/s] 75%|███████▍  | 3745/5000 [00:48<00:15, 80.64it/s] 75%|███████▌  | 3754/5000 [00:48<00:15, 81.65it/s] 75%|███████▌  | 3763/5000 [00:48<00:15, 82.02it/s] 75%|███████▌  | 3772/5000 [00:48<00:14, 81.89it/s] 76%|███████▌  | 3781/5000 [00:48<00:14, 81.67it/s] 76%|███████▌  | 3790/5000 [00:48<00:14, 81.45it/s] 76%|███████▌  | 3799/5000 [00:48<00:14, 81.31it/s] 76%|███████▌  | 3808/5000 [00:49<00:14, 81.28it/s] 76%|███████▋  | 3817/5000 [00:49<00:14, 80.23it/s] 77%|███████▋  | 3826/5000 [00:49<00:14, 79.81it/s] 77%|███████▋  | 3834/5000 [00:49<00:14, 79.81it/s] 77%|███████▋  | 3843/5000 [00:49<00:14, 80.33it/s] 77%|███████▋  | 3852/5000 [00:49<00:14, 81.87it/s] 77%|███████▋  | 3861/5000 [00:49<00:13, 81.82it/s] 77%|███████▋  | 3870/5000 [00:49<00:13, 81.37it/s] 78%|███████▊  | 3879/5000 [00:49<00:13, 82.60it/s] 78%|███████▊  | 3888/5000 [00:50<00:13, 84.08it/s] 78%|███████▊  | 3897/5000 [00:50<00:13, 84.60it/s] 78%|███████▊  | 3906/5000 [00:50<00:12, 84.38it/s] 78%|███████▊  | 3915/5000 [00:50<00:12, 83.83it/s] 78%|███████▊  | 3924/5000 [00:50<00:12, 83.40it/s] 79%|███████▊  | 3933/5000 [00:50<00:12, 83.37it/s] 79%|███████▉  | 3942/5000 [00:50<00:12, 82.28it/s] 79%|███████▉  | 3951/5000 [00:50<00:12, 81.95it/s] 79%|███████▉  | 3960/5000 [00:50<00:12, 80.30it/s] 79%|███████▉  | 3969/5000 [00:51<00:12, 80.13it/s] 80%|███████▉  | 3978/5000 [00:51<00:12, 79.30it/s] 80%|███████▉  | 3987/5000 [00:51<00:12, 79.81it/s] 80%|███████▉  | 3996/5000 [00:51<00:12, 80.03it/s] 80%|████████  | 4005/5000 [00:51<00:12, 80.80it/s] 80%|████████  | 4014/5000 [00:51<00:12, 80.91it/s] 80%|████████  | 4023/5000 [00:51<00:11, 81.47it/s] 81%|████████  | 4032/5000 [00:51<00:11, 82.54it/s] 81%|████████  | 4041/5000 [00:51<00:11, 82.53it/s] 81%|████████  | 4050/5000 [00:52<00:11, 81.92it/s] 81%|████████  | 4059/5000 [00:52<00:11, 81.21it/s] 81%|████████▏ | 4068/5000 [00:52<00:11, 82.08it/s] 82%|████████▏ | 4077/5000 [00:52<00:11, 82.72it/s] 82%|████████▏ | 4086/5000 [00:52<00:11, 82.83it/s] 82%|████████▏ | 4095/5000 [00:52<00:10, 84.34it/s] 82%|████████▏ | 4104/5000 [00:52<00:10, 82.82it/s] 82%|████████▏ | 4113/5000 [00:52<00:10, 83.97it/s] 82%|████████▏ | 4122/5000 [00:52<00:10, 82.03it/s] 83%|████████▎ | 4131/5000 [00:53<00:10, 81.52it/s] 83%|████████▎ | 4140/5000 [00:53<00:10, 80.22it/s] 83%|████████▎ | 4149/5000 [00:53<00:10, 79.89it/s] 83%|████████▎ | 4157/5000 [00:53<00:10, 79.40it/s] 83%|████████▎ | 4165/5000 [00:53<00:10, 79.41it/s] 83%|████████▎ | 4173/5000 [00:53<00:10, 79.22it/s] 84%|████████▎ | 4182/5000 [00:53<00:10, 79.82it/s] 84%|████████▍ | 4191/5000 [00:53<00:10, 80.56it/s] 84%|████████▍ | 4200/5000 [00:53<00:09, 80.92it/s] 84%|████████▍ | 4209/5000 [00:53<00:09, 82.68it/s] 84%|████████▍ | 4218/5000 [00:54<00:09, 81.96it/s] 85%|████████▍ | 4227/5000 [00:54<00:09, 80.86it/s] 85%|████████▍ | 4236/5000 [00:54<00:09, 80.85it/s] 85%|████████▍ | 4245/5000 [00:54<00:09, 81.92it/s] 85%|████████▌ | 4254/5000 [00:54<00:09, 80.25it/s] 85%|████████▌ | 4263/5000 [00:54<00:09, 80.60it/s] 85%|████████▌ | 4272/5000 [00:54<00:09, 79.93it/s] 86%|████████▌ | 4281/5000 [00:54<00:09, 78.70it/s] 86%|████████▌ | 4289/5000 [00:54<00:09, 76.79it/s] 86%|████████▌ | 4297/5000 [00:55<00:09, 76.96it/s] 86%|████████▌ | 4306/5000 [00:55<00:08, 78.01it/s] 86%|████████▋ | 4315/5000 [00:55<00:08, 78.86it/s] 86%|████████▋ | 4324/5000 [00:55<00:08, 80.02it/s] 87%|████████▋ | 4333/5000 [00:55<00:08, 81.67it/s] 87%|████████▋ | 4342/5000 [00:55<00:07, 82.80it/s] 87%|████████▋ | 4351/5000 [00:55<00:07, 83.27it/s] 87%|████████▋ | 4360/5000 [00:55<00:07, 83.53it/s] 87%|████████▋ | 4369/5000 [00:55<00:07, 81.59it/s] 88%|████████▊ | 4378/5000 [00:56<00:07, 82.46it/s] 88%|████████▊ | 4387/5000 [00:56<00:07, 82.83it/s] 88%|████████▊ | 4396/5000 [00:56<00:07, 81.99it/s] 88%|████████▊ | 4405/5000 [00:56<00:07, 81.13it/s] 88%|████████▊ | 4414/5000 [00:56<00:07, 78.93it/s] 88%|████████▊ | 4423/5000 [00:56<00:07, 79.53it/s] 89%|████████▊ | 4432/5000 [00:56<00:07, 80.02it/s] 89%|████████▉ | 4441/5000 [00:56<00:06, 80.78it/s] 89%|████████▉ | 4450/5000 [00:56<00:06, 81.26it/s] 89%|████████▉ | 4459/5000 [00:57<00:06, 81.40it/s] 89%|████████▉ | 4468/5000 [00:57<00:06, 81.23it/s] 90%|████████▉ | 4477/5000 [00:57<00:06, 80.18it/s] 90%|████████▉ | 4486/5000 [00:57<00:06, 79.30it/s] 90%|████████▉ | 4495/5000 [00:57<00:06, 80.42it/s] 90%|█████████ | 4504/5000 [00:57<00:06, 81.46it/s] 90%|█████████ | 4513/5000 [00:57<00:06, 80.98it/s] 90%|█████████ | 4522/5000 [00:57<00:05, 81.34it/s] 91%|█████████ | 4531/5000 [00:57<00:05, 81.57it/s] 91%|█████████ | 4540/5000 [00:58<00:05, 81.57it/s] 91%|█████████ | 4549/5000 [00:58<00:05, 82.63it/s] 91%|█████████ | 4558/5000 [00:58<00:05, 83.18it/s] 91%|█████████▏| 4567/5000 [00:58<00:05, 84.92it/s] 92%|█████████▏| 4576/5000 [00:58<00:04, 85.01it/s] 92%|█████████▏| 4585/5000 [00:58<00:04, 83.34it/s] 92%|█████████▏| 4594/5000 [00:58<00:04, 81.55it/s] 92%|█████████▏| 4603/5000 [00:58<00:04, 79.78it/s] 92%|█████████▏| 4611/5000 [00:58<00:04, 79.09it/s] 92%|█████████▏| 4620/5000 [00:59<00:04, 80.12it/s] 93%|█████████▎| 4629/5000 [00:59<00:04, 80.77it/s] 93%|█████████▎| 4638/5000 [00:59<00:04, 80.94it/s] 93%|█████████▎| 4647/5000 [00:59<00:04, 80.57it/s] 93%|█████████▎| 4656/5000 [00:59<00:04, 80.84it/s] 93%|█████████▎| 4665/5000 [00:59<00:04, 82.21it/s] 93%|█████████▎| 4674/5000 [00:59<00:03, 82.52it/s] 94%|█████████▎| 4683/5000 [00:59<00:03, 81.72it/s] 94%|█████████▍| 4692/5000 [00:59<00:03, 80.93it/s] 94%|█████████▍| 4701/5000 [01:00<00:03, 80.78it/s] 94%|█████████▍| 4710/5000 [01:00<00:03, 81.03it/s] 94%|█████████▍| 4719/5000 [01:00<00:03, 81.13it/s] 95%|█████████▍| 4728/5000 [01:00<00:03, 80.62it/s] 95%|█████████▍| 4737/5000 [01:00<00:03, 81.07it/s] 95%|█████████▍| 4746/5000 [01:00<00:03, 81.32it/s] 95%|█████████▌| 4755/5000 [01:00<00:03, 81.51it/s] 95%|█████████▌| 4764/5000 [01:00<00:02, 81.15it/s] 95%|█████████▌| 4773/5000 [01:00<00:02, 81.16it/s] 96%|█████████▌| 4782/5000 [01:01<00:02, 80.94it/s] 96%|█████████▌| 4791/5000 [01:01<00:02, 80.83it/s] 96%|█████████▌| 4800/5000 [01:01<00:02, 82.72it/s] 96%|█████████▌| 4809/5000 [01:01<00:02, 80.82it/s] 96%|█████████▋| 4818/5000 [01:01<00:02, 79.71it/s] 97%|█████████▋| 4827/5000 [01:01<00:02, 80.74it/s] 97%|█████████▋| 4836/5000 [01:01<00:02, 80.95it/s] 97%|█████████▋| 4845/5000 [01:01<00:01, 79.71it/s] 97%|█████████▋| 4854/5000 [01:01<00:01, 80.10it/s] 97%|█████████▋| 4863/5000 [01:02<00:01, 80.91it/s] 97%|█████████▋| 4872/5000 [01:02<00:01, 81.06it/s] 98%|█████████▊| 4881/5000 [01:02<00:01, 79.50it/s] 98%|█████████▊| 4890/5000 [01:02<00:01, 80.75it/s] 98%|█████████▊| 4899/5000 [01:02<00:01, 80.69it/s] 98%|█████████▊| 4908/5000 [01:02<00:01, 80.57it/s] 98%|█████████▊| 4917/5000 [01:02<00:01, 80.07it/s] 99%|█████████▊| 4926/5000 [01:02<00:00, 80.11it/s] 99%|█████████▊| 4935/5000 [01:02<00:00, 80.39it/s] 99%|█████████▉| 4944/5000 [01:03<00:00, 81.05it/s] 99%|█████████▉| 4953/5000 [01:03<00:00, 81.79it/s] 99%|█████████▉| 4962/5000 [01:03<00:00, 81.16it/s] 99%|█████████▉| 4971/5000 [01:03<00:00, 82.09it/s]100%|█████████▉| 4980/5000 [01:03<00:00, 82.03it/s]100%|█████████▉| 4989/5000 [01:03<00:00, 81.08it/s]100%|█████████▉| 4998/5000 [01:03<00:00, 80.59it/s]100%|██████████| 5000/5000 [01:03<00:00, 78.42it/s]
+  0%|          | 13/5000 [00:00<00:41, 121.49it/s]  1%|          | 26/5000 [00:00<00:40, 124.20it/s]  1%|          | 39/5000 [00:00<00:40, 123.46it/s]  1%|          | 52/5000 [00:00<00:40, 123.43it/s]  1%|▏         | 65/5000 [00:00<00:41, 118.80it/s]  2%|▏         | 77/5000 [00:00<00:41, 118.48it/s]  2%|▏         | 92/5000 [00:00<00:39, 125.60it/s]  2%|▏         | 106/5000 [00:00<00:38, 127.90it/s]  2%|▏         | 119/5000 [00:00<00:38, 128.38it/s]  3%|▎         | 134/5000 [00:01<00:36, 134.74it/s]  3%|▎         | 149/5000 [00:01<00:35, 138.11it/s]  3%|▎         | 164/5000 [00:01<00:34, 141.05it/s]  4%|▎         | 179/5000 [00:01<00:33, 142.52it/s]  4%|▍         | 194/5000 [00:01<00:33, 144.74it/s]  4%|▍         | 209/5000 [00:01<00:32, 145.31it/s]  4%|▍         | 224/5000 [00:01<00:32, 145.40it/s]  5%|▍         | 239/5000 [00:01<00:32, 145.19it/s]  5%|▌         | 254/5000 [00:01<00:32, 144.95it/s]  5%|▌         | 269/5000 [00:01<00:32, 145.51it/s]  6%|▌         | 284/5000 [00:02<00:32, 145.09it/s]  6%|▌         | 299/5000 [00:02<00:32, 143.94it/s]  6%|▋         | 314/5000 [00:02<00:32, 144.18it/s]  7%|▋         | 329/5000 [00:02<00:32, 142.49it/s]  7%|▋         | 344/5000 [00:02<00:32, 142.33it/s]  7%|▋         | 359/5000 [00:02<00:32, 142.37it/s]  7%|▋         | 374/5000 [00:02<00:32, 142.78it/s]  8%|▊         | 389/5000 [00:02<00:32, 143.33it/s]  8%|▊         | 404/5000 [00:02<00:32, 143.29it/s]  8%|▊         | 419/5000 [00:03<00:31, 143.78it/s]  9%|▊         | 434/5000 [00:03<00:31, 144.37it/s]  9%|▉         | 449/5000 [00:03<00:31, 144.85it/s]  9%|▉         | 465/5000 [00:03<00:30, 147.52it/s] 10%|▉         | 480/5000 [00:03<00:30, 147.68it/s] 10%|▉         | 496/5000 [00:03<00:30, 150.08it/s] 10%|█         | 512/5000 [00:03<00:30, 148.80it/s] 11%|█         | 527/5000 [00:03<00:30, 146.71it/s] 11%|█         | 543/5000 [00:03<00:30, 147.90it/s] 11%|█         | 558/5000 [00:03<00:30, 146.75it/s] 11%|█▏        | 573/5000 [00:04<00:30, 146.07it/s] 12%|█▏        | 588/5000 [00:04<00:30, 146.42it/s] 12%|█▏        | 604/5000 [00:04<00:29, 149.72it/s] 12%|█▏        | 619/5000 [00:04<00:29, 149.75it/s] 13%|█▎        | 635/5000 [00:04<00:28, 151.10it/s] 13%|█▎        | 651/5000 [00:04<00:28, 150.90it/s] 13%|█▎        | 667/5000 [00:04<00:28, 150.35it/s] 14%|█▎        | 683/5000 [00:04<00:28, 150.10it/s] 14%|█▍        | 699/5000 [00:04<00:29, 148.31it/s] 14%|█▍        | 714/5000 [00:05<00:29, 146.76it/s] 15%|█▍        | 729/5000 [00:05<00:29, 145.14it/s] 15%|█▍        | 744/5000 [00:05<00:29, 145.60it/s] 15%|█▌        | 759/5000 [00:05<00:29, 144.98it/s] 15%|█▌        | 774/5000 [00:05<00:28, 146.25it/s] 16%|█▌        | 789/5000 [00:05<00:28, 146.64it/s] 16%|█▌        | 804/5000 [00:05<00:28, 145.92it/s] 16%|█▋        | 819/5000 [00:05<00:28, 145.43it/s] 17%|█▋        | 834/5000 [00:05<00:28, 145.30it/s] 17%|█▋        | 849/5000 [00:05<00:28, 143.18it/s] 17%|█▋        | 864/5000 [00:06<00:28, 142.77it/s] 18%|█▊        | 879/5000 [00:06<00:28, 142.56it/s] 18%|█▊        | 894/5000 [00:06<00:28, 142.70it/s] 18%|█▊        | 909/5000 [00:06<00:28, 144.18it/s] 18%|█▊        | 924/5000 [00:06<00:28, 145.03it/s] 19%|█▉        | 939/5000 [00:06<00:27, 145.70it/s] 19%|█▉        | 954/5000 [00:06<00:27, 146.16it/s] 19%|█▉        | 969/5000 [00:06<00:27, 144.80it/s] 20%|█▉        | 984/5000 [00:06<00:27, 144.39it/s] 20%|█▉        | 999/5000 [00:06<00:27, 143.28it/s] 20%|██        | 1014/5000 [00:07<00:27, 143.81it/s] 21%|██        | 1029/5000 [00:07<00:27, 144.91it/s] 21%|██        | 1044/5000 [00:07<00:27, 145.25it/s] 21%|██        | 1059/5000 [00:07<00:27, 144.48it/s] 21%|██▏       | 1074/5000 [00:07<00:26, 145.78it/s] 22%|██▏       | 1089/5000 [00:07<00:26, 145.30it/s] 22%|██▏       | 1104/5000 [00:07<00:26, 145.70it/s] 22%|██▏       | 1119/5000 [00:07<00:26, 146.67it/s] 23%|██▎       | 1134/5000 [00:07<00:26, 145.09it/s] 23%|██▎       | 1150/5000 [00:08<00:26, 146.51it/s] 23%|██▎       | 1165/5000 [00:08<00:26, 146.48it/s] 24%|██▎       | 1180/5000 [00:08<00:26, 145.20it/s] 24%|██▍       | 1195/5000 [00:08<00:26, 146.30it/s] 24%|██▍       | 1210/5000 [00:08<00:25, 147.01it/s] 24%|██▍       | 1225/5000 [00:08<00:26, 145.06it/s] 25%|██▍       | 1240/5000 [00:08<00:25, 145.85it/s] 25%|██▌       | 1255/5000 [00:08<00:25, 144.52it/s] 25%|██▌       | 1270/5000 [00:08<00:25, 144.09it/s] 26%|██▌       | 1285/5000 [00:08<00:26, 142.47it/s] 26%|██▌       | 1300/5000 [00:09<00:25, 142.37it/s] 26%|██▋       | 1315/5000 [00:09<00:25, 142.02it/s] 27%|██▋       | 1330/5000 [00:09<00:25, 143.09it/s] 27%|██▋       | 1345/5000 [00:09<00:25, 142.61it/s] 27%|██▋       | 1360/5000 [00:09<00:25, 142.45it/s] 28%|██▊       | 1375/5000 [00:09<00:25, 143.24it/s] 28%|██▊       | 1390/5000 [00:09<00:24, 144.46it/s] 28%|██▊       | 1405/5000 [00:09<00:24, 145.13it/s] 28%|██▊       | 1420/5000 [00:09<00:24, 144.50it/s] 29%|██▊       | 1435/5000 [00:09<00:24, 145.11it/s] 29%|██▉       | 1450/5000 [00:10<00:24, 146.15it/s] 29%|██▉       | 1465/5000 [00:10<00:24, 145.50it/s] 30%|██▉       | 1480/5000 [00:10<00:24, 143.69it/s] 30%|██▉       | 1495/5000 [00:10<00:24, 142.82it/s] 30%|███       | 1510/5000 [00:10<00:24, 144.24it/s] 30%|███       | 1525/5000 [00:10<00:23, 145.39it/s] 31%|███       | 1540/5000 [00:10<00:23, 145.34it/s] 31%|███       | 1555/5000 [00:10<00:23, 145.35it/s] 31%|███▏      | 1570/5000 [00:10<00:23, 146.25it/s] 32%|███▏      | 1585/5000 [00:11<00:23, 146.77it/s] 32%|███▏      | 1600/5000 [00:11<00:23, 146.60it/s] 32%|███▏      | 1615/5000 [00:11<00:23, 146.64it/s] 33%|███▎      | 1630/5000 [00:11<00:23, 145.97it/s] 33%|███▎      | 1645/5000 [00:11<00:22, 146.10it/s] 33%|███▎      | 1660/5000 [00:11<00:22, 146.39it/s] 34%|███▎      | 1675/5000 [00:11<00:22, 146.24it/s] 34%|███▍      | 1690/5000 [00:11<00:22, 145.99it/s] 34%|███▍      | 1705/5000 [00:11<00:22, 144.69it/s] 34%|███▍      | 1720/5000 [00:11<00:22, 144.81it/s] 35%|███▍      | 1735/5000 [00:12<00:22, 144.81it/s] 35%|███▌      | 1750/5000 [00:12<00:22, 145.08it/s] 35%|███▌      | 1766/5000 [00:12<00:21, 147.11it/s] 36%|███▌      | 1782/5000 [00:12<00:21, 149.32it/s] 36%|███▌      | 1797/5000 [00:12<00:21, 148.88it/s] 36%|███▌      | 1812/5000 [00:12<00:21, 148.60it/s] 37%|███▋      | 1827/5000 [00:12<00:21, 148.54it/s] 37%|███▋      | 1843/5000 [00:12<00:21, 150.01it/s] 37%|███▋      | 1859/5000 [00:12<00:20, 150.43it/s] 38%|███▊      | 1875/5000 [00:12<00:20, 149.71it/s] 38%|███▊      | 1890/5000 [00:13<00:20, 148.84it/s] 38%|███▊      | 1905/5000 [00:13<00:20, 148.94it/s] 38%|███▊      | 1920/5000 [00:13<00:20, 149.11it/s] 39%|███▊      | 1935/5000 [00:13<00:20, 148.37it/s] 39%|███▉      | 1950/5000 [00:13<00:20, 148.81it/s] 39%|███▉      | 1965/5000 [00:13<00:20, 147.21it/s] 40%|███▉      | 1980/5000 [00:13<00:20, 147.04it/s] 40%|███▉      | 1996/5000 [00:13<00:20, 150.00it/s] 40%|████      | 2012/5000 [00:13<00:19, 150.98it/s] 41%|████      | 2028/5000 [00:14<00:20, 147.81it/s] 41%|████      | 2043/5000 [00:14<00:20, 146.71it/s] 41%|████      | 2058/5000 [00:14<00:20, 145.71it/s] 41%|████▏     | 2073/5000 [00:14<00:20, 144.28it/s] 42%|████▏     | 2088/5000 [00:14<00:20, 143.90it/s] 42%|████▏     | 2103/5000 [00:14<00:20, 143.26it/s] 42%|████▏     | 2118/5000 [00:14<00:19, 144.42it/s] 43%|████▎     | 2133/5000 [00:14<00:19, 145.81it/s] 43%|████▎     | 2148/5000 [00:14<00:19, 145.66it/s] 43%|████▎     | 2163/5000 [00:14<00:19, 144.40it/s] 44%|████▎     | 2178/5000 [00:15<00:19, 144.57it/s] 44%|████▍     | 2194/5000 [00:15<00:19, 146.13it/s] 44%|████▍     | 2209/5000 [00:15<00:19, 145.49it/s] 44%|████▍     | 2224/5000 [00:15<00:19, 144.53it/s] 45%|████▍     | 2239/5000 [00:15<00:18, 145.57it/s] 45%|████▌     | 2254/5000 [00:15<00:18, 145.17it/s] 45%|████▌     | 2269/5000 [00:15<00:18, 144.12it/s] 46%|████▌     | 2284/5000 [00:15<00:19, 142.95it/s] 46%|████▌     | 2299/5000 [00:15<00:19, 141.18it/s] 46%|████▋     | 2314/5000 [00:16<00:18, 142.39it/s] 47%|████▋     | 2329/5000 [00:16<00:18, 142.73it/s] 47%|████▋     | 2344/5000 [00:16<00:18, 142.33it/s] 47%|████▋     | 2359/5000 [00:16<00:18, 141.98it/s] 47%|████▋     | 2374/5000 [00:16<00:18, 143.94it/s] 48%|████▊     | 2389/5000 [00:16<00:17, 145.23it/s] 48%|████▊     | 2404/5000 [00:16<00:17, 145.94it/s] 48%|████▊     | 2420/5000 [00:16<00:17, 147.77it/s] 49%|████▊     | 2435/5000 [00:16<00:17, 145.98it/s] 49%|████▉     | 2450/5000 [00:16<00:17, 146.51it/s] 49%|████▉     | 2466/5000 [00:17<00:17, 148.41it/s] 50%|████▉     | 2481/5000 [00:17<00:17, 147.07it/s] 50%|████▉     | 2496/5000 [00:17<00:17, 147.15it/s] 50%|█████     | 2512/5000 [00:17<00:16, 148.24it/s] 51%|█████     | 2528/5000 [00:17<00:16, 149.06it/s] 51%|█████     | 2543/5000 [00:17<00:16, 146.92it/s] 51%|█████     | 2559/5000 [00:17<00:16, 148.43it/s] 51%|█████▏    | 2574/5000 [00:17<00:16, 147.81it/s] 52%|█████▏    | 2589/5000 [00:17<00:16, 146.37it/s] 52%|█████▏    | 2604/5000 [00:17<00:16, 146.36it/s] 52%|█████▏    | 2620/5000 [00:18<00:15, 148.84it/s] 53%|█████▎    | 2635/5000 [00:18<00:15, 148.08it/s] 53%|█████▎    | 2651/5000 [00:18<00:15, 149.22it/s] 53%|█████▎    | 2667/5000 [00:18<00:15, 149.74it/s] 54%|█████▎    | 2682/5000 [00:18<00:15, 149.33it/s] 54%|█████▍    | 2697/5000 [00:18<00:15, 147.05it/s] 54%|█████▍    | 2712/5000 [00:18<00:15, 147.28it/s] 55%|█████▍    | 2727/5000 [00:18<00:15, 148.00it/s] 55%|█████▍    | 2743/5000 [00:18<00:15, 149.40it/s] 55%|█████▌    | 2759/5000 [00:19<00:14, 149.91it/s] 56%|█████▌    | 2775/5000 [00:19<00:14, 150.30it/s] 56%|█████▌    | 2791/5000 [00:19<00:14, 148.14it/s] 56%|█████▌    | 2806/5000 [00:19<00:14, 148.03it/s] 56%|█████▋    | 2821/5000 [00:19<00:14, 148.32it/s] 57%|█████▋    | 2836/5000 [00:19<00:14, 148.51it/s] 57%|█████▋    | 2851/5000 [00:19<00:14, 148.36it/s] 57%|█████▋    | 2866/5000 [00:19<00:14, 148.53it/s] 58%|█████▊    | 2882/5000 [00:19<00:14, 149.56it/s] 58%|█████▊    | 2898/5000 [00:19<00:13, 150.45it/s] 58%|█████▊    | 2914/5000 [00:20<00:14, 148.62it/s] 59%|█████▊    | 2930/5000 [00:20<00:13, 149.07it/s] 59%|█████▉    | 2945/5000 [00:20<00:13, 148.83it/s] 59%|█████▉    | 2961/5000 [00:20<00:13, 148.90it/s] 60%|█████▉    | 2977/5000 [00:20<00:13, 149.30it/s] 60%|█████▉    | 2993/5000 [00:20<00:13, 149.85it/s] 60%|██████    | 3008/5000 [00:20<00:13, 149.31it/s] 60%|██████    | 3023/5000 [00:20<00:13, 148.95it/s] 61%|██████    | 3038/5000 [00:20<00:13, 148.71it/s] 61%|██████    | 3053/5000 [00:21<00:13, 147.28it/s] 61%|██████▏   | 3068/5000 [00:21<00:13, 146.07it/s] 62%|██████▏   | 3083/5000 [00:21<00:13, 146.97it/s] 62%|██████▏   | 3098/5000 [00:21<00:12, 147.55it/s] 62%|██████▏   | 3114/5000 [00:21<00:12, 148.73it/s] 63%|██████▎   | 3129/5000 [00:21<00:12, 147.82it/s] 63%|██████▎   | 3144/5000 [00:21<00:12, 147.83it/s] 63%|██████▎   | 3159/5000 [00:21<00:12, 147.56it/s] 63%|██████▎   | 3174/5000 [00:21<00:12, 145.58it/s] 64%|██████▍   | 3190/5000 [00:21<00:12, 147.12it/s] 64%|██████▍   | 3206/5000 [00:22<00:12, 149.05it/s] 64%|██████▍   | 3222/5000 [00:22<00:11, 150.65it/s] 65%|██████▍   | 3238/5000 [00:22<00:11, 148.57it/s] 65%|██████▌   | 3253/5000 [00:22<00:11, 146.63it/s] 65%|██████▌   | 3268/5000 [00:22<00:11, 144.59it/s] 66%|██████▌   | 3283/5000 [00:22<00:11, 145.02it/s] 66%|██████▌   | 3299/5000 [00:22<00:11, 146.63it/s] 66%|██████▋   | 3314/5000 [00:22<00:11, 145.31it/s] 67%|██████▋   | 3329/5000 [00:22<00:11, 145.76it/s] 67%|██████▋   | 3344/5000 [00:22<00:11, 144.09it/s] 67%|██████▋   | 3359/5000 [00:23<00:11, 144.53it/s] 67%|██████▋   | 3374/5000 [00:23<00:11, 144.81it/s] 68%|██████▊   | 3389/5000 [00:23<00:11, 144.57it/s] 68%|██████▊   | 3404/5000 [00:23<00:11, 144.01it/s] 68%|██████▊   | 3419/5000 [00:23<00:11, 142.35it/s] 69%|██████▊   | 3434/5000 [00:23<00:11, 141.48it/s] 69%|██████▉   | 3449/5000 [00:23<00:10, 141.32it/s] 69%|██████▉   | 3464/5000 [00:23<00:10, 142.06it/s] 70%|██████▉   | 3479/5000 [00:23<00:10, 143.08it/s] 70%|██████▉   | 3494/5000 [00:24<00:10, 142.81it/s] 70%|███████   | 3509/5000 [00:24<00:10, 143.73it/s] 70%|███████   | 3524/5000 [00:24<00:10, 145.09it/s] 71%|███████   | 3539/5000 [00:24<00:10, 145.34it/s] 71%|███████   | 3554/5000 [00:24<00:09, 144.88it/s] 71%|███████▏  | 3570/5000 [00:24<00:09, 147.24it/s] 72%|███████▏  | 3585/5000 [00:24<00:09, 147.72it/s] 72%|███████▏  | 3600/5000 [00:24<00:09, 146.13it/s] 72%|███████▏  | 3616/5000 [00:24<00:09, 147.45it/s] 73%|███████▎  | 3631/5000 [00:24<00:09, 148.08it/s] 73%|███████▎  | 3646/5000 [00:25<00:09, 148.28it/s] 73%|███████▎  | 3661/5000 [00:25<00:09, 147.68it/s] 74%|███████▎  | 3676/5000 [00:25<00:08, 147.45it/s] 74%|███████▍  | 3691/5000 [00:25<00:08, 147.07it/s] 74%|███████▍  | 3706/5000 [00:25<00:08, 147.78it/s] 74%|███████▍  | 3721/5000 [00:25<00:08, 147.29it/s] 75%|███████▍  | 3736/5000 [00:25<00:08, 146.70it/s] 75%|███████▌  | 3752/5000 [00:25<00:08, 148.00it/s] 75%|███████▌  | 3768/5000 [00:25<00:08, 149.79it/s] 76%|███████▌  | 3783/5000 [00:25<00:08, 149.60it/s] 76%|███████▌  | 3798/5000 [00:26<00:08, 148.27it/s] 76%|███████▋  | 3813/5000 [00:26<00:07, 148.60it/s] 77%|███████▋  | 3828/5000 [00:26<00:07, 148.54it/s] 77%|███████▋  | 3843/5000 [00:26<00:07, 147.72it/s] 77%|███████▋  | 3859/5000 [00:26<00:07, 148.93it/s] 78%|███████▊  | 3875/5000 [00:26<00:07, 149.22it/s] 78%|███████▊  | 3890/5000 [00:26<00:07, 146.82it/s] 78%|███████▊  | 3905/5000 [00:26<00:07, 146.81it/s] 78%|███████▊  | 3920/5000 [00:26<00:07, 146.11it/s] 79%|███████▊  | 3936/5000 [00:27<00:07, 147.44it/s] 79%|███████▉  | 3951/5000 [00:27<00:07, 147.43it/s] 79%|███████▉  | 3966/5000 [00:27<00:07, 147.65it/s] 80%|███████▉  | 3981/5000 [00:27<00:06, 146.54it/s] 80%|███████▉  | 3996/5000 [00:27<00:06, 146.74it/s] 80%|████████  | 4012/5000 [00:27<00:06, 148.23it/s] 81%|████████  | 4028/5000 [00:27<00:06, 150.37it/s] 81%|████████  | 4044/5000 [00:27<00:06, 149.14it/s] 81%|████████  | 4059/5000 [00:27<00:06, 148.24it/s] 81%|████████▏ | 4074/5000 [00:27<00:06, 148.04it/s] 82%|████████▏ | 4089/5000 [00:28<00:06, 147.65it/s] 82%|████████▏ | 4104/5000 [00:28<00:06, 146.65it/s] 82%|████████▏ | 4119/5000 [00:28<00:06, 146.83it/s] 83%|████████▎ | 4134/5000 [00:28<00:05, 146.75it/s] 83%|████████▎ | 4149/5000 [00:28<00:05, 146.08it/s] 83%|████████▎ | 4164/5000 [00:28<00:05, 146.36it/s] 84%|████████▎ | 4179/5000 [00:28<00:05, 146.22it/s] 84%|████████▍ | 4194/5000 [00:28<00:05, 145.50it/s] 84%|████████▍ | 4209/5000 [00:28<00:05, 146.51it/s] 84%|████████▍ | 4224/5000 [00:28<00:05, 145.98it/s] 85%|████████▍ | 4239/5000 [00:29<00:05, 147.15it/s] 85%|████████▌ | 4254/5000 [00:29<00:05, 146.86it/s] 85%|████████▌ | 4269/5000 [00:29<00:04, 147.11it/s] 86%|████████▌ | 4284/5000 [00:29<00:04, 146.00it/s] 86%|████████▌ | 4299/5000 [00:29<00:04, 146.23it/s] 86%|████████▋ | 4314/5000 [00:29<00:04, 145.38it/s] 87%|████████▋ | 4329/5000 [00:29<00:04, 146.12it/s] 87%|████████▋ | 4344/5000 [00:29<00:04, 144.19it/s] 87%|████████▋ | 4359/5000 [00:29<00:04, 145.56it/s] 87%|████████▋ | 4374/5000 [00:30<00:04, 145.06it/s] 88%|████████▊ | 4389/5000 [00:30<00:04, 145.09it/s] 88%|████████▊ | 4404/5000 [00:30<00:04, 145.49it/s] 88%|████████▊ | 4419/5000 [00:30<00:03, 146.27it/s] 89%|████████▊ | 4434/5000 [00:30<00:03, 147.16it/s] 89%|████████▉ | 4449/5000 [00:30<00:03, 147.62it/s] 89%|████████▉ | 4464/5000 [00:30<00:03, 146.22it/s] 90%|████████▉ | 4479/5000 [00:30<00:03, 145.73it/s] 90%|████████▉ | 4494/5000 [00:30<00:03, 146.39it/s] 90%|█████████ | 4509/5000 [00:30<00:03, 146.45it/s] 90%|█████████ | 4524/5000 [00:31<00:03, 146.92it/s] 91%|█████████ | 4539/5000 [00:31<00:03, 147.78it/s] 91%|█████████ | 4554/5000 [00:31<00:03, 147.54it/s] 91%|█████████▏| 4569/5000 [00:31<00:02, 147.03it/s] 92%|█████████▏| 4584/5000 [00:31<00:02, 146.42it/s] 92%|█████████▏| 4599/5000 [00:31<00:02, 146.00it/s] 92%|█████████▏| 4614/5000 [00:31<00:02, 143.96it/s] 93%|█████████▎| 4629/5000 [00:31<00:02, 142.91it/s] 93%|█████████▎| 4644/5000 [00:31<00:02, 143.02it/s] 93%|█████████▎| 4660/5000 [00:31<00:02, 145.47it/s] 94%|█████████▎| 4675/5000 [00:32<00:02, 146.05it/s] 94%|█████████▍| 4690/5000 [00:32<00:02, 143.68it/s] 94%|█████████▍| 4705/5000 [00:32<00:02, 143.83it/s] 94%|█████████▍| 4720/5000 [00:32<00:01, 142.67it/s] 95%|█████████▍| 4735/5000 [00:32<00:01, 142.99it/s] 95%|█████████▌| 4751/5000 [00:32<00:01, 145.63it/s] 95%|█████████▌| 4766/5000 [00:32<00:01, 146.17it/s] 96%|█████████▌| 4781/5000 [00:32<00:01, 146.76it/s] 96%|█████████▌| 4796/5000 [00:32<00:01, 144.33it/s] 96%|█████████▌| 4811/5000 [00:33<00:01, 143.98it/s] 97%|█████████▋| 4826/5000 [00:33<00:01, 144.73it/s] 97%|█████████▋| 4841/5000 [00:33<00:01, 145.13it/s] 97%|█████████▋| 4856/5000 [00:33<00:00, 145.70it/s] 97%|█████████▋| 4871/5000 [00:33<00:00, 145.60it/s] 98%|█████████▊| 4886/5000 [00:33<00:00, 145.39it/s] 98%|█████████▊| 4901/5000 [00:33<00:00, 144.33it/s] 98%|█████████▊| 4916/5000 [00:33<00:00, 145.87it/s] 99%|█████████▊| 4931/5000 [00:33<00:00, 144.62it/s] 99%|█████████▉| 4946/5000 [00:33<00:00, 143.29it/s] 99%|█████████▉| 4961/5000 [00:34<00:00, 143.38it/s]100%|█████████▉| 4976/5000 [00:34<00:00, 144.67it/s]100%|█████████▉| 4991/5000 [00:34<00:00, 144.32it/s]100%|██████████| 5000/5000 [00:34<00:00, 145.62it/s]
 ******************** Output ********************
 (10432, 1)
 Saving data...

@@ -334,7 +334,7 @@ b_grid_path = f"{pa.dirname(__file__)}/b_grid.csv"
 frac_det = 1.0  # frac_det=1 in the limit where we detect all AGNs flares
 mapdir = "/hildafs/projects/phy220048p/share/skymaps"
 dt_followup = 200
-N_GW_followups = g23.DF_GW.shape[0]  # [50,10]
+N_GW_followups = g23.DF_GW_G23.shape[0]  # [50,10]
 
 # Get posterior samples for lambda and H0
 samples_path = f"{PROJDIR}/Posterior_sims_H0_O4/O4_samples_graham23.dat"
@@ -358,16 +358,16 @@ if args.force or not pa.exists(s_grid_path) or not pa.exists(b_grid_path):
     pbs, distnorms, distmus, distsigmas = [], [], [], []
     B_expected_n = []
     n_idx_sort_cut = []
-    for i in g23.DF_GW.index:
+    for i in g23.DF_GW_G23.index:
         ##############################
         ###  Signals (BBH flares)  ###
         ##############################
 
         # Load skymap
-        hs_flat = get_flattened_skymap(mapdir, g23.DF_GW["gweventname"][i])
+        hs_flat = get_flattened_skymap(mapdir, g23.DF_GW_G23["gweventname"][i])
 
         # Get eventname, strip asterisk if needed
-        gweventname = g23.DF_GW["gweventname"][i]
+        gweventname = g23.DF_GW_G23["gweventname"][i]
         if gweventname.endswith("*"):
             gweventname = gweventname[:-1]
 
@@ -480,7 +480,7 @@ if args.force or not pa.exists(s_grid_path) or not pa.exists(b_grid_path):
         flares_per_agn = np.array(flares_per_agn)
 
         # Load skymap, calculate expected number of background flares
-        hs = get_gwtc_skymap(mapdir, g23.DF_GW["gweventname"][i])
+        hs = get_gwtc_skymap(g23.DF_GW_G23["gweventname"][i])
         vol90 = crossmatch(hs, contours=[0.9]).contour_vols[0]
         n_bg = vol90 * agn_per_mpc3 * flares_per_agn
         B_expected_n.append(n_bg)
@@ -502,7 +502,7 @@ if args.force or not pa.exists(s_grid_path) or not pa.exists(b_grid_path):
     )
 
     # Iterate over followups
-    gweventnames = g23.DF_GW["gweventname"]
+    gweventnames = g23.DF_GW_G23["gweventname"]
     flarenames = np.unique(g23.DF_ASSOC["flarename"])
     s_grid = pd.DataFrame(
         np.zeros((gweventnames.shape[0], flarenames.shape[0])),
@@ -512,9 +512,9 @@ if args.force or not pa.exists(s_grid_path) or not pa.exists(b_grid_path):
     b_grid = copy(s_grid)
     print(s_grid)
     print(b_grid)
-    for gii, gi in enumerate(g23.DF_GW.index):
+    for gii, gi in enumerate(g23.DF_GW_G23.index):
         # Get eventname, strip asterisk if needed
-        gweventname = g23.DF_GW["gweventname"][gi]
+        gweventname = g23.DF_GW_G23["gweventname"][gi]
         if gweventname.endswith("*"):
             gweventname = gweventname[:-1]
 

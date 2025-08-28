@@ -143,11 +143,7 @@ if __name__ == "__main__":
             v["density_kwargs"].pop("brightness_units")
 
     # Define constants
-    N_GW_followups = g23.DF_GW.shape[0]  # [50,10]
-    lam_arr = np.linspace(0, 1.0, num=100)
-
-    # Load lightcurve fit parameters
-    df_fitparams = pd.read_csv(f"{PROJDIR}/fit_lightcurves/fitparams.csv")
+    N_GW_followups = g23.DF_GW_G23.shape[0]  # [50,10]
 
     # Calculate maximum distance for background events
     cosmo = FlatLambdaCDM(H0=config["H00"], Om0=config["Om0"])
@@ -164,7 +160,7 @@ if __name__ == "__main__":
     #########################
     print("Setting up science...")
 
-    lnprob_args = inference.setup(config, df_fitparams, nproc=config["nproc"])
+    lnprob_args = inference.setup(config, nproc=config["nproc"])
 
     #########################
     ###    Calc. arrs     ###

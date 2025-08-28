@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
         # Model number of AGNs
         # Load skymap
-        sm = get_gwtc_skymap(config["gwmapdir"], g23.DF_GW["gweventname"][i])
+        sm = get_gwtc_skymap(g23.DF_GW_G23["gweventname"][i])
         # Iterate over a sample of H0 values
         n_agns = []
         hs = np.linspace(20, 120, num=10)

@@ -15,9 +15,9 @@ plt.style.use(f"{PROJDIR}/plots/matplotlibrc.mplstyle")
 
 # mbins = np.linspace(0, 200, 50)
 
-for col in g23.DF_GWPLUS.columns:
+for col in g23.DF_GW.columns:
     if ("mass" in col) and (not "lower" in col) and (not "upper" in col):
-        x = g23.DF_GWPLUS[col]
+        x = g23.DF_GW[col]
         if np.all(np.isnan(x)):
             continue
         plt.hist(
