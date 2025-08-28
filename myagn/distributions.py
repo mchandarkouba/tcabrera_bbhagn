@@ -21,36 +21,6 @@ class AGNDistribution:
     def __init__(self) -> None:
         pass
 
-    def dn_d3Mpc_at_dL(
-        self,
-        dLs,
-    ):
-        """_summary_
-
-        Parameters
-        ----------
-        dLs : _type_
-            _description_
-        cosmology : _type_, optional
-            _description_, by default FlatLambdaCDM(H0=70, Om0=0.3)
-        brightness_limits : _type_, optional
-            _description_, by default None
-        band : str, optional
-            _description_, by default "g"
-        """
-        # Calculate redshifts
-        zs = z_at_value(self.cosmo.luminosity_distance, dLs)
-
-        # Get density of AGNs in Mpc^-3
-        dn_d3Mpc = self.dn_d3Mpc(
-            zs.value,
-            cosmo=self.cosmo,
-            brightness_limits=self.brightness_limits,
-            band=self.band,
-        )
-
-        return dn_d3Mpc
-
     def _dn_d3Mpc_at_dL(
         self,
         dLs,
@@ -80,6 +50,32 @@ class AGNDistribution:
             cosmo=cosmo,
             brightness_limits=brightness_limits,
             band=band,
+        )
+
+        return dn_d3Mpc
+
+    def dn_d3Mpc_at_dL(
+        self,
+        dLs,
+    ):
+        """_summary_
+
+        Parameters
+        ----------
+        dLs : _type_
+            _description_
+        cosmology : _type_, optional
+            _description_, by default FlatLambdaCDM(H0=70, Om0=0.3)
+        brightness_limits : _type_, optional
+            _description_, by default None
+        band : str, optional
+            _description_, by default "g"
+        """
+        dn_d3Mpc = self._dn_d3Mpc_at_dL(
+            dLs,
+            cosmo=self.cosmo,
+            brightness_limits=self.brightness_limits,
+            band=self.band,
         )
 
         return dn_d3Mpc
@@ -375,7 +371,7 @@ class QLFHopkins(AGNDistribution):
             # Get qlf info
             df_qlf = qlfhopkins.compute(0, z)
 
-            # Sum all number densities for luminosities larger than limit
+            # Sum all number densities for luminosities within limits
             dn_dlog10L_d3Mpc = df_qlf[
                 (
                     df_qlf["bolometric_luminosity"]

@@ -14,11 +14,21 @@ bbhmass_max: 200.0 # Upper limit for BBH mass in solar masses
 
 # AGN distribution
 agn_distribution:
-  model: "Milliquas"
-  args: []
-  kwargs: {}
-  density_args: []
-  density_kwargs: {}
+  astrophysical:
+    model: "Milliquas"
+    args: []
+    kwargs: {}
+    density_args: []
+    density_kwargs: {}
+  observed:
+    model: "QLFHopkins"
+    args: []
+    kwargs: {}
+    density_args: []
+    density_kwargs:
+      brightness_limits: [20.5, "-inf"]
+      brightness_units: "ABmag"
+      band: "g"
 
 # Flare rate
 flare_rate:

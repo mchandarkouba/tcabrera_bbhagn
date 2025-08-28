@@ -123,15 +123,24 @@ if __name__ == "__main__":
     config = yaml.safe_load(open(config_file))
 
     # Parse AGN distribution config
-    if config["agn_distribution"]["model"] == "ConstantPhysicalDensity":
-        config["agn_distribution"]["args"] = (
-            config["agn_distribution"]["args"] * u.Mpc**-3
-        )
-    if "brightness_limits" in config["agn_distribution"]["density_kwargs"]:
-        config["agn_distribution"]["density_kwargs"]["brightness_limits"] = [
-            float(bl)
-            for bl in config["agn_distribution"]["density_kwargs"]["brightness_limits"]
-        ] * u.ABmag
+    for k, v in config["agn_distribution"].items():
+        if v["model"] == "ConstantPhysicalDensity":
+            v["args"] = v["args"] * u.Mpc**-3
+        if "brightness_limits" in v["density_kwargs"]:
+            if "brightness_units" not in v["density_kwargs"]:
+                raise ValueError(
+                    "Must specify brightness_units if brightness_limits is given."
+                )
+            if v["density_kwargs"]["brightness_units"] == "ABmag":
+                bu = u.ABmag
+            elif v["density_kwargs"]["brightness_units"] == "erg/s":
+                bu = u.erg / u.s
+            else:
+                raise ValueError("brightness_units must be 'ABmag' or 'erg/s'.")
+            v["density_kwargs"]["brightness_limits"] = [
+                float(bl) for bl in v["density_kwargs"]["brightness_limits"]
+            ] * bu
+            v["density_kwargs"].pop("brightness_units")
 
     # Define constants
     N_GW_followups = g23.DF_GW.shape[0]  # [50,10]
@@ -166,7 +175,7 @@ if __name__ == "__main__":
         config["H00"],
         config["Om0"],
         *lnprob_args[:-1],  # last is flares_per_agn_average
-        config["agn_distribution"],
+        config["agn_distribution"]["astrophysical"],
         config["z_min_b"],
         config["z_max_b"],
     )

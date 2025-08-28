@@ -176,19 +176,15 @@ def calc_b_arr(
     # Hardcoded values use QLFHopkins for all
     agndist = getattr(
         myagndistributions,
-        # agndist_config["model"],
-        "QLFHopkins",
+        agndist_config["model"],
     )(
-        # *agndist_config["args"],
-        *[] * u.Mpc**-3,
-        # **agndist_config["kwargs"],
-        **{},
+        *agndist_config["args"],
+        **agndist_config["kwargs"],
     )
 
     # If Milliquas, add Graham+23 cuts
     # z <= 1.2 cut not included, because Graham+23 already does the 3D crossmatch and the z_grid we use here extends to 2.0
-    # if agndist_config["model"] == "Milliquas":
-    if False:
+    if agndist_config["model"] == "Milliquas":
         mask = np.array(
             ["q" not in t for t in agndist._catalog["Type"]]
         )  # & (agndist._catalog["z"] <= 1.2)
@@ -197,14 +193,9 @@ def calc_b_arr(
     # Calculate background probability densities
     b_arr = agndist.dn_dOmega_dz(
         z_flares,
-        # *agndist_config["density_args"],
-        *[],
+        *agndist_config["density_args"],
         cosmo=cosmo,
-        # **agndist_config["density_kwargs"],
-        **{
-            "brightness_limits": [float(b) for b in [20.5, "-inf"]] * u.ABmag,
-            "band": "g",
-        },
+        **agndist_config["density_kwargs"],
     )
 
     return b_arr
@@ -393,16 +384,17 @@ def _setup_task(i, config, df_fitparams):
 
     ### Set AGN count model (polynomial as function of H0)
     # Get AGN distribution
+    agnconfig_obs = config["agn_distribution"]["observed"]
     agndist = getattr(
         myagndistributions,
-        config["agn_distribution"]["model"],
+        agnconfig_obs["model"],
     )(
-        *config["agn_distribution"]["args"],
-        **config["agn_distribution"]["kwargs"],
+        *agnconfig_obs["args"],
+        **agnconfig_obs["kwargs"],
     )
 
     # Set density_kwargs as attributes
-    for k, v in config["agn_distribution"]["density_kwargs"].items():
+    for k, v in agnconfig_obs["density_kwargs"].items():
         setattr(agndist, k, v)
 
     # Model number of AGNs
@@ -416,7 +408,7 @@ def _setup_task(i, config, df_fitparams):
             agndist._dn_d3Mpc_at_dL(
                 dL * u.Mpc,
                 cosmo=cosmo,
-                **config["agn_distribution"]["density_kwargs"],
+                **agnconfig_obs["density_kwargs"],
             )
             .to(u.Mpc**-3)
             .value

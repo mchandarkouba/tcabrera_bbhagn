@@ -128,6 +128,8 @@ def plot_lambda_posteriors(paths):
             r"$m_1$ >= 40 (29 BBHs), 4-6 flares)",
             r"$m_{\rm fin}$ < 40 (27 BBHs, 0 flares)",
             r"$m_{\rm fin}$ >= 40 (52 BBHs, 6 flares)",
+            r"$L_{\rm bol}$ >= 3e42 erg/s",
+            r"$L_{\rm bol}$ >= 5e41 erg/s",
         ],
     ):
         plot_lambda_posterior(
@@ -164,7 +166,7 @@ def plot_lambda_posteriors(paths):
 
 # Get the directory path from the command line
 if len(sys.argv) == 1:
-    _default_array_jobs = [11, 12, 13, 14, 15]
+    _default_array_jobs = [11, 12, 13, 14, 15, 16, 17]
     print(f"Usage: python {pa.basename(__file__)} <path_to_directory>")
     print(f"Defaulting to array jobs {_default_array_jobs}.")
     paths = [
