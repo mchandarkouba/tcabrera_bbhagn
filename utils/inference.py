@@ -5,6 +5,7 @@ from math import pi
 import astropy.units as u
 import astropy_healpix as ah
 import numpy as np
+import pandas as pd
 from astropy.coordinates import SkyCoord
 from astropy.time import Time
 from astropy.io import fits
@@ -21,7 +22,6 @@ PROJDIR = pa.dirname(pa.dirname(__file__))
 sys.path.append(PROJDIR)
 from myagn import distributions as myagndistributions
 from myagn.flares import models as myflaremodels
-import utils.graham23_tables as g23
 import utils.io as io
 from utils.gwselection import selection_beta
 
@@ -328,21 +328,21 @@ def _setup_task(i, config):
     print(f"Index {i}")
     return_dict = {}
     cosmo = FlatLambdaCDM(H0=config["H00"], Om0=config["Om0"])
+    df_gw = pd.read_csv(config["gw_csv"])
+    df_flare = pd.read_csv(config["flare_csv"])
     flare_coords = SkyCoord(
-        ra=g23.DF_FLARE["ra"].values * u.deg,
-        dec=g23.DF_FLARE["dec"].values * u.deg,
-        distance=cosmo.luminosity_distance(g23.DF_FLARE["Redshift"].values),
+        ra=df_flare["ra"].values * u.deg,
+        dec=df_flare["dec"].values * u.deg,
+        distance=cosmo.luminosity_distance(df_flare["Redshift"].values),
     )
-    flare_times = Time(
-        g23.DF_FLARE["t_peak_g"] - 2 * g23.DF_FLARE["t_rise_g"], format="mjd"
-    )
+    flare_times = Time(df_flare["t_peak_g"] - 2 * df_flare["t_rise_g"], format="mjd")
 
     ##############################
     ###  Signals (BBH flares)  ###
     ##############################
 
     # Get eventname, strip asterisk if needed
-    gweventname = g23.DF_GW["gweventname"][i]
+    gweventname = df_gw["gweventname"][i]
     if gweventname.endswith("*"):
         gweventname = gweventname[:-1]
     print(gweventname)
@@ -353,7 +353,7 @@ def _setup_task(i, config):
     print("Loading skymap...")
 
     # Load skymap
-    sm = read_sky_map(g23.DF_GW["skymap_path"][i], moc=True)
+    sm = read_sky_map(df_gw["skymap_path"][i], moc=True)
 
     # Get data from skymap
     pbden = sm["PROBDENSITY"]
@@ -368,20 +368,20 @@ def _setup_task(i, config):
 
     # Get flares for this followup
     mask = mask_flares_in_followup(
-        g23.DF_GW["skymap_path"][i],
+        df_gw["skymap_path"][i],
         flare_coords,
         flare_times,
         cosmo=cosmo,
         dt_followup=config["dt_followup"] * u.day,
     )
-    followup_flares = g23.DF_FLARE["flarename"][mask]
+    followup_flares = df_flare["flarename"][mask]
 
     # Iterate over flares
     pbdens = []
     distnorms = []
     distmus = []
     distsigmas = []
-    for _, fr in g23.DF_FLARE.iterrows():
+    for _, fr in df_flare.iterrows():
         # Check if flare in followup
         if fr["flarename"] not in followup_flares.values:
             pbdens.append(np.nan)
@@ -451,7 +451,7 @@ def _setup_task(i, config):
         )
 
     # Load skymap
-    sm = read_sky_map(g23.DF_GW["skymap_path"][i], moc=True)
+    sm = read_sky_map(df_gw["skymap_path"][i], moc=True)
     # Iterate over a sample of H0 values
     n_agns = []
     hs = np.linspace(20, 120, num=10)
@@ -472,18 +472,20 @@ def _setup_task(i, config):
     del sm
 
     # Append f_cover for GW event
-    return_dict["f_covers"] = g23.DF_GW["f_cover"][i]
+    return_dict["f_covers"] = df_gw["f_cover"][i]
 
     return return_dict
 
 
 def setup(config, nproc=1):
+    df_gw = pd.read_csv(config["gw_csv"])
+    df_flare = pd.read_csv(config["flare_csv"])
     ##############################
     ###    Flares  ###
     ##############################
 
     # Set cand_zs
-    cand_zs = g23.DF_FLARE["Redshift"].values
+    cand_zs = df_flare["Redshift"].values
 
     # flares_per_agn rates
     # Set flare model
@@ -497,7 +499,7 @@ def setup(config, nproc=1):
 
     # Iterate over flares
     flares_per_agn_average = []
-    for _, fr in g23.DF_FLARE.iterrows():
+    for _, fr in df_flare.iterrows():
         # Iterate over filters, using only g and r
         rates = []
         print("\n", fr["flarename"])
@@ -528,19 +530,19 @@ def setup(config, nproc=1):
     ##############################
 
     # Select GWs
-    idxs = g23.DF_GW.index
+    idxs = df_gw.index
     masks = []
     # Mass cut, ignoring if mass is nan
-    massmask = (g23.DF_GW[config["bbhmass_type"]] >= config["bbhmass_min"]) & (
-        g23.DF_GW[config["bbhmass_type"]] < config["bbhmass_max"]
+    massmask = (df_gw[config["bbhmass_type"]] >= config["bbhmass_min"]) & (
+        df_gw[config["bbhmass_type"]] < config["bbhmass_max"]
     )
-    massmask = massmask | (np.isnan(g23.DF_GW[config["bbhmass_type"]]))
+    massmask = massmask | (np.isnan(df_gw[config["bbhmass_type"]]))
     masks.append(massmask)
     # Combine masks, select idxs
     mask = np.all(np.array(masks), axis=0)
     idxs = idxs[mask]
     print(
-        f"Using {len(idxs)}/{g23.DF_GW.shape[0]} GWs with {config['bbhmass_min']} <= {config['bbhmass_type']} < {config['bbhmass_max']}..."
+        f"Using {len(idxs)}/{df_gw.shape[0]} GWs with {config['bbhmass_min']} <= {config['bbhmass_type']} < {config['bbhmass_max']}..."
     )
 
     # Iterate over followups

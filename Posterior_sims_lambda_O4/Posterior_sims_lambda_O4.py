@@ -22,7 +22,6 @@ from numpy.polynomial.polynomial import Polynomial
 sys.path.append(pa.dirname(pa.dirname(__file__)))
 from myagn import distributions as myagndistributions
 from myagn.flares import models as myflaremodels
-import utils.graham23_tables as g23
 import utils.inference as inference
 import utils.io as io
 from utils.paths import DATADIR, PROJDIR
@@ -143,7 +142,8 @@ if __name__ == "__main__":
             v["density_kwargs"].pop("brightness_units")
 
     # Define constants
-    N_GW_followups = g23.DF_GW_G23.shape[0]  # [50,10]
+    df_gw = pd.read_csv(config["gw_csv"])
+    N_GW_followups = df_gw.shape[0]  # [50,10]
 
     # Calculate maximum distance for background events
     cosmo = FlatLambdaCDM(H0=config["H00"], Om0=config["Om0"])

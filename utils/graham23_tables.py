@@ -61,6 +61,8 @@ for fn in np.unique(df_fitparams["flarename"]):
     df_temp.append(dict_temp)
 df_temp = pd.DataFrame(df_temp)
 DF_FLARE = DF_FLARE.merge(df_temp, on="flarename", how="left")
+df_flare_path = pa.join(DATADIR, "graham23_tables", "flare.csv")
+DF_FLARE.to_csv(df_flare_path, index=False)
 
 # Get bright? GW information
 DF_GWBRIGHT = pd.read_csv(f"{TABLEDIR}/graham23_table4.plus.dat", sep="\s+")
@@ -134,3 +136,5 @@ DF_GW = pd.concat(
     ],
     axis=1,
 )
+df_gw_path = pa.join(DATADIR, "graham23_tables", "gw.csv")
+DF_GW.to_csv(df_gw_path, index=False)
