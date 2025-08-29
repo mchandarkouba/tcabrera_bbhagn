@@ -6,7 +6,7 @@ GW dataframe columns:
 - `skymap_path`
 - GWTC mass(es), as required by `bbhmass_type` in `config.yaml`
 - `f_cover` (fraction of GW posterior covered by followup)
-- 
+
 Flare dataframe columns:
 - `ra`
 - `dec`
