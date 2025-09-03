@@ -61,6 +61,7 @@ for fn in np.unique(df_fitparams["flarename"]):
     df_temp.append(dict_temp)
 df_temp = pd.DataFrame(df_temp)
 DF_FLARE = DF_FLARE.merge(df_temp, on="flarename", how="left")
+DF_FLARE["mjd"] = DF_FLARE["t_peak_g"] - 3 * DF_FLARE["t_rise_g"]
 df_flare_path = pa.join(DATADIR, "graham23_tables", "flare.csv")
 DF_FLARE.to_csv(df_flare_path, index=False)
 
