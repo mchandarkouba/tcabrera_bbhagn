@@ -7,14 +7,14 @@ Folder for running jobs as sbatch array.
 | Run | BBH cut  | AGN (astrophysical) | AGN (observed) | Flare rate |
 | --- | -------- | ------------------- | -------------- | ---------- |
 | 1   | $0 < m_1/m_\odot < 200$ | $10^{-4.75}$ | * | $1.06 \times 10^{-8}$ |
-| 2   | ^ | $10^{-4.75}$ | * | Kimura+20 |
+| 2   | ^ | ^ | * | Kimura+20 |
 | 3   | ^ | QLFHopkins, $m_g < 20.5$ | * | $1.06 \times 10^{-8}$ |
-| 4   | ^ | QLFHopkins, $m_g < 20.5$ | * | Kimura+20 |
-| 5   | ^ | QLFHopkins, $m_g < 20.5$ | * | $4.79 \times 10^{-8}$ |
-| 7   | ^ | QLFHopkins, $m_g < 20.5$ | * | $4.79 \times 10^{-8}$ |
+| 4   | ^ | ^ | * | Kimura+20 |
+| 5   | ^ | $10^{-4.75}$ | * | $4.79 \times 10^{-8}$ |
+| 7   | ^ | QLFHopkins, $m_g < 20.5$ | * | ^ |
 | 9   | ^ | Milliquas | * | $1.06 \times 10^{-8}$ |
 | 10  | ^ | ^ | * | $4.79 \times 10^{-8}$ |
-| 11  | ^ | Milliquas | QLFHopkins, $m_g < 20.5$ | $1.06 \times 10^{-8}$ |
+| 11  | ^ | ^ | QLFHopkins, $m_g < 20.5$ | $1.06 \times 10^{-8}$ |
 | 12  | $0 < m_1/m_\odot < 40$ | ^ | ^ | ^ |
 | 13  | $40 < m_1/m_\odot < 200$ | ^ | ^ | ^ |
 | 14  | $0 < m_{\rm fin}/m_\odot < 40$ | ^ | ^ | ^ |
