@@ -16,13 +16,13 @@ bbhmass_max: 40.0 # Upper limit for BBH mass in solar masses
 
 # AGN distribution
 agn_distribution:
-  observed:
+  astrophysical:
     model: "Milliquas"
     args: []
     kwargs: {}
     density_args: []
     density_kwargs: {}
-  astrophysical:
+  observed:
     model: "QLFHopkins"
     args: []
     kwargs: {}
