@@ -45,7 +45,7 @@ def plot_lambda_posterior(path, plot_kwargs={}, ax=None):
     else:
         quantstr = f"$\lambda = {peak:.3f}_{{- {lo:.3f}}}^{{+ {hi:.3f}}}$"
     # Plot
-    plot_kwargs["label"] += f": {quantstr}"
+    # plot_kwargs["label"] += f": {quantstr}"
     lines = ax.plot(x, pdf, rasterized=True, **plot_kwargs)
     ax.fill_between(
         x,
@@ -76,13 +76,13 @@ def plot_lambda_posterior(path, plot_kwargs={}, ax=None):
         rasterized=True,
     )
     directory = float(pa.basename(path))
-    m = (0.75 - 0.95) / (18 - 11)
+    m = (0.65 - 0.95) / (18 - 11)
     b = 0.95 - m * 11
     ax.text(
         0.95,
         b + m * directory,
         # 0.95,
-        f"$\lambda_{{1 \sigma}} = {hi:.3f}$\n$\lambda_{{90\%}} = {np.quantile(samples, 0.9):.3f}$",
+        f"{plot_kwargs['label']}\n$\lambda_{{1 \sigma}} = {hi:.3f}$\n$\lambda_{{90\%}} = {np.quantile(samples, 0.9):.3f}$",
         ha="right",
         va="top",
         transform=ax.transAxes,
@@ -126,7 +126,11 @@ def plot_lambda_posteriors(paths):
     )
     # Plot
     for path, label in zip(
-        paths, [r"1.06 $\times$ 10$^{-8}$", r"4.79 $\times$ 10$^{-8}$"]
+        paths,
+        [
+            "GWTC-3.0 (83 BBHs)",
+            "BBHs with flares (6 BBHs)",
+        ],
     ):
         plot_lambda_posterior(
             # plot_lambda_posterior_hist(
