@@ -30,8 +30,8 @@ def plot_lambda_posterior(path, plot_kwargs={}, ax=None):
     samples = np.loadtxt(pa.join(path, "O4_samples_graham23.dat"))
     samples_kde = np.concatenate([samples, -samples, 2 - samples])
     # Gaussian kde
-    kernel = gaussian_kde(samples_kde, bw_method=0.0005)
-    x = np.linspace(0, 0.1, 1001)
+    kernel = gaussian_kde(samples_kde, bw_method=0.005)
+    x = np.linspace(0, 0.45, 1001)
     pdf = 3 * kernel(
         x
     )  # "3 *" because the KDE is normalized over [-samples_max, samples_max]
@@ -75,10 +75,13 @@ def plot_lambda_posterior(path, plot_kwargs={}, ax=None):
         color=lines[0].get_color(),
         rasterized=True,
     )
+    directory = float(pa.basename(path))
+    m = (0.75 - 0.95) / (18 - 11)
+    b = 0.95 - m * 11
     ax.text(
         0.95,
-        # 3.15 - float(pa.basename(directory)) / 4, # for jobs 9, 10
-        0.95,
+        b + m * directory,
+        # 0.95,
         f"$\lambda_{{1 \sigma}} = {hi:.3f}$\n$\lambda_{{90\%}} = {np.quantile(samples, 0.9):.3f}$",
         ha="right",
         va="top",
@@ -119,7 +122,7 @@ def plot_lambda_posteriors(paths):
     fig, ax = plt.subplots(
         1,
         1,
-        figsize=(4, 3),
+        figsize=(3.5, 3),
     )
     # Plot
     for path, label in zip(
@@ -132,7 +135,7 @@ def plot_lambda_posteriors(paths):
             plot_kwargs={"label": label},
         )
     # Format
-    ax.set_xlim(0, 0.1)
+    ax.set_xlim(0, 0.45)
     ax.set_xlabel(r"$\lambda$")
     ax.set_ylabel("PDF")
     # ax.legend(
@@ -159,11 +162,14 @@ def plot_lambda_posteriors(paths):
 
 # Get the directory path from the command line
 if len(sys.argv) == 1:
-    _default_array_jobs = [11]
+    _default_array_jobs = [
+        11,
+        18,
+    ]
     print(f"Usage: python {pa.basename(__file__)} <path_to_directory>")
     print(f"Defaulting to array jobs {_default_array_jobs}.")
     paths = [
-        pa.join(PROJDIR, f"Posterior_sims_lambda_O4/array/{i}")
+        pa.join(PROJDIR, f"Posterior_inference_lambda_O3/array/{i}")
         for i in _default_array_jobs
     ]
 else:
