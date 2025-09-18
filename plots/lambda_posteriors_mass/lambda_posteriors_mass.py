@@ -29,7 +29,7 @@ def plot_lambda_posterior(path, plot_kwargs={}, ax=None):
     samples_kde = np.concatenate([samples, -samples, 2 - samples])
     # Gaussian kde
     kernel = gaussian_kde(samples_kde, bw_method=0.005)
-    x = np.linspace(0, 0.1, 1001)
+    x = np.linspace(0, 0.45, 1001)
     pdf = 3 * kernel(
         x
     )  # "3 *" because the KDE is normalized over [-samples_max, samples_max]
@@ -51,7 +51,7 @@ def plot_lambda_posterior(path, plot_kwargs={}, ax=None):
         pdf,
         where=(x >= quants[1]) & (x <= quants[2]),
         color=lines[0].get_color(),
-        alpha=0.6,
+        alpha=0.4,
         lw=0,
         rasterized=True,
     )
@@ -61,7 +61,7 @@ def plot_lambda_posterior(path, plot_kwargs={}, ax=None):
         pdf,
         where=(x >= 0) & (x <= np.quantile(samples, 0.9)),
         color=lines[0].get_color(),
-        alpha=0.5,
+        alpha=0.3,
         lw=0,
         rasterized=True,
     )
@@ -117,19 +117,22 @@ def plot_lambda_posteriors(paths):
     fig, ax = plt.subplots(
         1,
         1,
-        figsize=(6, 4),
+        figsize=(4, 3.5),
     )
     # Plot
     for path, label in zip(
         paths,
         [
-            "All (80 BBHs, 6 flares)",
-            r"$m_1$ < 40 (51 BBHs, 1-2 flares)",
-            r"$m_1$ >= 40 (29 BBHs), 4-6 flares)",
-            r"$m_{\rm fin}$ < 40 (27 BBHs, 0 flares)",
-            r"$m_{\rm fin}$ >= 40 (52 BBHs, 6 flares)",
-            r"$L_{\rm bol}$ >= 3e42 erg/s",
-            r"$L_{\rm bol}$ >= 5e41 erg/s",
+            "GWTC-3.0 (83 BBHs)",
+            "BBHs with flares (6 BBHs)",
+            # r"$m_1$ < 40 (51 BBHs, 1-2 flares)",
+            # r"$m_1$ >= 40 (29 BBHs), 4-6 flares)",
+            # r"$m_{\rm fin}$ < 40 (27 BBHs, 0 flares)",
+            # r"$m_{\rm fin}$ >= 40 (52 BBHs, 6 flares)",
+            # r"$L_{\rm bol}$ >= 3e42 erg/s",
+            # "^same, only coincidences",
+            # r"$L_{\rm bol}$ >= 5e41 erg/s",
+            # "^same, only coincidences",
         ],
     ):
         plot_lambda_posterior(
@@ -139,7 +142,7 @@ def plot_lambda_posteriors(paths):
             plot_kwargs={"label": label},
         )
     # Format
-    ax.set_xlim(0, 0.1)
+    ax.set_xlim(0, 0.45)
     ax.set_xlabel(r"$\lambda$")
     ax.set_ylabel("PDF")
     ax.legend(
@@ -166,11 +169,22 @@ def plot_lambda_posteriors(paths):
 
 # Get the directory path from the command line
 if len(sys.argv) == 1:
-    _default_array_jobs = [11, 12, 13, 14, 15, 16, 17]
+    _default_array_jobs = [
+        11,
+        18,
+        # 12,
+        # 13,
+        # 14,
+        # 15,
+        # 16,
+        # 19,
+        # 17,
+        # 20,
+    ]
     print(f"Usage: python {pa.basename(__file__)} <path_to_directory>")
     print(f"Defaulting to array jobs {_default_array_jobs}.")
     paths = [
-        pa.join(PROJDIR, f"Posterior_sims_lambda_O4/array/{i}")
+        pa.join(PROJDIR, f"Posterior_inference_lambda_O3/array/{i}")
         for i in _default_array_jobs
     ]
 else:

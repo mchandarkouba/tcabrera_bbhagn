@@ -7,7 +7,7 @@
 #SBATCH -o %x.log
 #SBATCH -A phy220048p
 #SBATCH -p HENON
-#SBATCH -a 1,2,3,4,5,7,9,10,11,12,13,14,15,16,17
+#SBATCH -a 18,19,20
 
 ### SETUP ###
 
