@@ -28,7 +28,9 @@ LAMBDA_UPPERLIMIT = 0.2
 
 def calc_arrs_for_directory(directory, force=False):
     # Check if cached
-    cache_dir = pa.join(pa.dirname(__file__), ".cache", pa.basename(directory))
+    # cache_dir = pa.join(pa.dirname(__file__), ".cache", pa.basename(directory))
+    # This is for displaying jobs 11 and 18; should have identical s/b_arrs, but the lambda samples will change
+    cache_dir = pa.join(pa.dirname(__file__), ".cache", "11")
     s_arr_path = pa.join(cache_dir, "s_arrs.npy")
     b_arr_path = pa.join(cache_dir, "b_arrs.npy")
     n_flares_bgs_path = pa.join(cache_dir, "n_flares_bgs.npy")
@@ -36,28 +38,36 @@ def calc_arrs_for_directory(directory, force=False):
     if pa.exists(s_arr_path) and pa.exists(b_arr_path) and not force:
         s_arrs = pd.read_csv(s_arr_path, index_col=0)
         b_arrs = pd.read_csv(b_arr_path, index_col=0)
-        n_flares_bgs = pd.read_csv(n_flares_bgs_path, index_col=0)
+        n_agns = pd.read_csv(n_flares_bgs_path, index_col=0)
     else:
         # Config
         config = yaml.safe_load(open(pa.join(directory, "config.yaml")))
-        if config["agn_distribution"]["model"] == "ConstantPhysicalDensity":
-            config["agn_distribution"]["args"] = (
-                config["agn_distribution"]["args"] * u.Mpc**-3
-            )
-        if "brightness_limits" in config["agn_distribution"]["density_kwargs"]:
-            config["agn_distribution"]["density_kwargs"]["brightness_limits"] = [
-                float(bl)
-                for bl in config["agn_distribution"]["density_kwargs"][
-                    "brightness_limits"
-                ]
-            ] * u.ABmag
+        # Parse AGN distribution config
+        for k, v in config["agn_distribution"].items():
+            if v["model"] == "ConstantPhysicalDensity":
+                v["args"] = v["args"] * u.Mpc**-3
+            if "brightness_limits" in v["density_kwargs"]:
+                if "brightness_units" not in v["density_kwargs"]:
+                    raise ValueError(
+                        "Must specify brightness_units if brightness_limits is given."
+                    )
+                if v["density_kwargs"]["brightness_units"] == "ABmag":
+                    bu = u.ABmag
+                elif v["density_kwargs"]["brightness_units"] == "erg/s":
+                    bu = u.erg / u.s
+                else:
+                    raise ValueError("brightness_units must be 'ABmag' or 'erg/s'.")
+                v["density_kwargs"]["brightness_limits"] = [
+                    float(bl) for bl in v["density_kwargs"]["brightness_limits"]
+                ] * bu
+                v["density_kwargs"].pop("brightness_units")
         # Calculations
-        lnprob_args = inference.setup(config, DF_FITPARAMS, nproc=config["nproc"])
-        s_arrs, b_arrs, n_flares_bgs = inference.calc_arrs(
+        lnprob_args = inference.setup(config, nproc=config["nproc"])
+        s_arrs, b_arrs, n_agns = inference.calc_arrs(
             config["H00"],
             config["Om0"],
             *lnprob_args[:-1],
-            config["agn_distribution"],
+            config["agn_distribution"]["astrophysical"],
             config["z_min_b"],
             config["z_max_b"],
         )
@@ -77,8 +87,8 @@ def calc_arrs_for_directory(directory, force=False):
             index=gweventnames,
             columns=flarenames,
         )
-        n_flares_bgs = pd.DataFrame(
-            n_flares_bgs,
+        n_agns = pd.DataFrame(
+            n_agns,
             index=gweventnames,
             columns=flarenames,
         )
@@ -86,8 +96,8 @@ def calc_arrs_for_directory(directory, force=False):
         os.makedirs(cache_dir, exist_ok=True)
         s_arrs.to_csv(s_arr_path)
         b_arrs.to_csv(b_arr_path)
-        n_flares_bgs.to_csv(n_flares_bgs_path)
-    return s_arrs, b_arrs, n_flares_bgs
+        n_agns.to_csv(n_flares_bgs_path)
+    return s_arrs, b_arrs, n_agns
 
 
 def plot_association_pdf(directory, signal, signals, background, ax=None):
@@ -350,8 +360,20 @@ def plot_association_pdf_grid(
                     ax=ax,
                 )
             else:
-                mask = b_arr_assoc.loc[:, fn] != 2.12e-6
-                gn = gweventnames[mask][0]
+                # Find background terms, skip GW190620_030421
+                mask = (
+                    b_arr_assoc.loc[
+                        [n for n in b_arr_assoc.index if n != "GW190620_030421"], fn
+                    ]
+                    != 2.12e-6
+                )
+                print(b_arr_assoc.loc[:, fn])
+                print(gweventnames)
+                print(mask)
+                if not np.any(mask):
+                    gn = gweventnames[0]
+                else:
+                    gn = gweventnames[mask][0]
                 plot_background_pdf(
                     directory,
                     s_arr_assoc.loc[:, fn][~np.isnan(s_arr_assoc.loc[:, fn])],
@@ -521,7 +543,7 @@ if len(sys.argv) == 1:
     print(f"Usage: python {pa.basename(__file__)} <path_to_directory>")
     print(f"Defaulting to array jobs {_default_array_jobs}.")
     paths = [
-        pa.join(PROJDIR, f"Posterior_sims_lambda_O4/array/{i}")
+        pa.join(PROJDIR, f"Posterior_inference_lambda_O3/array/{i}")
         for i in _default_array_jobs
     ]
 else:
@@ -537,8 +559,22 @@ for p in paths:
 
 # Get GW and flare names
 gweventnames = g23.DF_GWBRIGHT.sort_values("dataset")["gweventname"].values
+# Remove GW190731_140936, GW200216_220804, and GW200220_124850
+gweventnames = np.array(
+    [
+        gn
+        for gn in gweventnames
+        if gn
+        not in [
+            "GW190731_140936",
+            "GW200216_220804",
+            "GW200220_124850",
+        ]
+    ]
+)
 flarenames = g23.DF_FLARE["flarename"].values
 selected_flarenames = np.unique(g23.DF_ASSOC["flarename"].values)
+selected_flarenames = np.array([fn for fn in flarenames if fn != "J154342.46+461233.4"])
 selected_gws = np.unique(g23.DF_ASSOC["gweventname"].values)
 gweventnames = np.array([gn for gn in gweventnames if gn in selected_gws])
 flarenames = np.array([fn for fn in flarenames if fn in selected_flarenames])
