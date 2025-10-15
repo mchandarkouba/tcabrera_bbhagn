@@ -314,7 +314,7 @@ def initialize_mosaic_axes(
     gweventnames,
     flarenames,
     subplot_mosaic_kwargs={
-        "figsize": (12, 8.5),
+        "figsize": (10, 7),
         "gridspec_kw": {
             "wspace": 0.0,
             "hspace": 0.1,
@@ -367,9 +367,6 @@ def plot_association_pdf_grid(
                     ]
                     != 2.12e-6
                 )
-                print(b_arr_assoc.loc[:, fn])
-                print(gweventnames)
-                print(mask)
                 if not np.any(mask):
                     gn = gweventnames[0]
                 else:
@@ -516,7 +513,7 @@ def plot_association_pdfs(
     # Save
     plt.tight_layout()
     plt.subplots_adjust(
-        top=0.85,
+        top=0.8,
         left=0.05,
         right=0.85,
     )
@@ -574,7 +571,13 @@ gweventnames = np.array(
 )
 flarenames = g23.DF_FLARE["flarename"].values
 selected_flarenames = np.unique(g23.DF_ASSOC["flarename"].values)
-selected_flarenames = np.array([fn for fn in flarenames if fn != "J154342.46+461233.4"])
+selected_flarenames = np.array(
+    [
+        fn
+        for fn in flarenames
+        if fn not in ["J183412.42+365655.3", "J154342.46+461233.4"]
+    ]
+)
 selected_gws = np.unique(g23.DF_ASSOC["gweventname"].values)
 gweventnames = np.array([gn for gn in gweventnames if gn in selected_gws])
 flarenames = np.array([fn for fn in flarenames if fn in selected_flarenames])
