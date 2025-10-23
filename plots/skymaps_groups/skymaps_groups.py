@@ -152,10 +152,10 @@ for color in colors:
     )
 
 # Initialize figure
-mosaic = np.arange(len(gwlists)).reshape((2, 1))
+mosaic = np.arange(len(gwlists)).reshape((1, 2))
 fig, axd = plt.subplot_mosaic(
     mosaic,
-    figsize=(6, 6),
+    figsize=(10, 3),
     subplot_kw={"projection": "astro hours mollweide"},
 )
 
