@@ -400,8 +400,14 @@ class Milliquas(AGNDistribution):
         self,
         cachedir=f"{pa.dirname(__file__)}/.cache",
         # catalog_url="https://quasars.org/milliquas.fits.zip",
-        catalog_url="https://cdsarc.cds.unistra.fr/viz-bin/nph-Cat/fits.gz?VII/290/catalog.dat.gz", # MQv7.2, compressed version
+        # NOTE: The first url has the table in an easily read fits format, as does the second.
+        #   However, as of 250909 the url requires a signin to access.
+        #   The third url has the same table, but in a txt format I haven't figured out how to read.
+        #   Altogether, this needs a more robust solution.
+        #   A copy of the file should exist on PSC-Vera for copying as needed until then.
+        catalog_url="https://cdsarc.cds.unistra.fr/viz-bin/nph-Cat/fits.gz?VII/290/catalog.dat.gz",  # MQv7.2, compressed version
         # catalog_url="https://cdsarc.cds.unistra.fr/viz-bin/nph-Cat/fits?VII/290/catalog.dat.gz", # MQv7.2
+        # catalog_url="https://cdsarc.cds.unistra.fr/ftp/VII/290/catalog.dat.gz",  # MQv7.2, new link b/c old one requires permissions
         z_grid=np.linspace(0, 6, 100),
     ) -> None:
         """_summary_

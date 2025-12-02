@@ -144,7 +144,7 @@ def lnlike_all(
         n_agns_i = n_agns[i]
 
         # Get non-filled values
-        s_arr_i = s_arr_i[s_arr_i != 0]
+        s_arr_i = s_arr_i[b_arr_i != 1]
         b_arr_i = b_arr_i[b_arr_i != 1]
         ####################
         ###  Likelihood  ###
@@ -335,7 +335,7 @@ def _setup_task(i, config):
         dec=df_flare["dec"].values * u.deg,
         distance=cosmo.luminosity_distance(df_flare["Redshift"].values),
     )
-    flare_times = Time(df_flare["t_peak_g"] - 2 * df_flare["t_rise_g"], format="mjd")
+    flare_times = Time(df_flare["mjd"], format="mjd")
 
     ##############################
     ###  Signals (BBH flares)  ###
@@ -507,13 +507,20 @@ def setup(config, nproc=1):
             # Calculate structure function prob
             # 3σ = 3 * t_rise is a conservative estimate for the Δt of the Δm
             # / (1+z) converts to rest frame timescale
-            delta_t = 3 * fr[f"t_rise_{f}"] / (1 + fr["Redshift"])
-            prob = flaremodel.flare_rate(
-                f,
-                delta_t,
-                -fr[f"f_peak_{f}"],
-                fr["Redshift"],
-            )
+            if config["flare_rate"]["model"] == "ConstantRate":
+                prob = flaremodel.flare_rate()
+            elif config["flare_rate"]["model"] == "Kimura20":
+                delta_t = 3 * fr[f"t_rise_{f}"] / (1 + fr["Redshift"])
+                prob = flaremodel.flare_rate(
+                    f,
+                    delta_t,
+                    -fr[f"f_peak_{f}"],
+                    fr["Redshift"],
+                )
+            else:
+                raise ValueError(
+                    f"Unknown flare rate model {config['flare_rate']['model']}"
+                )
 
             # Scale to follow-up window
             rate = prob * config["dt_followup"]

@@ -1,0 +1,5 @@
+slurmstepd: error: TaskProlog failed status=1
+
+real	3m2.801s
+user	20m10.555s
+sys	0m34.701s

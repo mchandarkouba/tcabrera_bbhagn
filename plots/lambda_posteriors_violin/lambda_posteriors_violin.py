@@ -1,0 +1,205 @@
+import os
+import os.path as pa
+import sys
+
+import astropy.units as u
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import yaml
+from matplotlib.patches import Patch
+from scipy.stats import gaussian_kde
+
+# Local imports
+sys.path.append(pa.dirname(pa.dirname(pa.dirname(__file__))))
+import utils.graham23_tables as g23
+from utils import inference
+from utils.paths import PROJDIR
+from utils.stats import calc_zero_cl, cl_around_mode
+
+# Style file
+plt.style.use(f"{PROJDIR}/plots/matplotlibrc.mplstyle")
+#
+DF_FITPARAMS = pd.read_csv(f"{PROJDIR}/fit_lightcurves/fitparams.csv")
+
+################################################################################
+
+
+def plot_lambda_posterior(path, offset=0, plot_kwargs={}, ax=None):
+    # Load samples
+    samples = np.loadtxt(pa.join(path, "O4_samples_graham23.dat"))
+    samples_kde = np.concatenate([samples, -samples, 2 - samples])
+    # Gaussian kde
+    kernel = gaussian_kde(samples_kde, bw_method=0.005)
+    x = np.linspace(0, 0.45, 1001)
+    pdf = 3 * kernel(
+        x
+    )  # "3 *" because the KDE is normalized over [-samples_max, samples_max]
+    # Quantiles
+    quants = cl_around_mode(x, pdf)
+    peak = quants[0]
+    lo = peak - quants[1]
+    hi = quants[2] - peak
+    if peak == 0:
+        quantstr = f"$\lambda < {hi:.3f}$"
+    else:
+        quantstr = f"$\lambda = {peak:.3f}_{{- {lo:.3f}}}^{{+ {hi:.3f}}}$"
+    # Scale to figure
+    y_lo = offset - 0.45 * pdf / np.nanmax(pdf)
+    y_hi = offset + 0.45 * pdf / np.nanmax(pdf)
+    # Plot
+    # plot_kwargs["label"] += f": {quantstr}"
+    lines = ax.plot(x, [offset] * len(x), rasterized=True, lw=0.5, **plot_kwargs)
+    color = lines[0].get_color()
+    ax.plot(x, y_lo, rasterized=True, color=color, lw=0.5, **plot_kwargs)
+    ax.plot(x, y_hi, rasterized=True, color=color, lw=0.5, **plot_kwargs)
+    ax.fill_between(
+        x,
+        y_lo,
+        y_hi,
+        where=(x >= quants[1]) & (x <= quants[2]),
+        color=color,
+        alpha=0.6,
+        lw=0,
+        rasterized=True,
+    )
+    ax.fill_between(
+        x,
+        y_lo,
+        y_hi,
+        where=(x >= 0) & (x <= np.quantile(samples, 0.9)),
+        color=color,
+        alpha=0.5,
+        lw=0,
+        rasterized=True,
+    )
+    # # Plot line for median
+    # ax.vlines(
+    #     peak,
+    #     y_lo,
+    #     pdf[np.digitize(peak, x) - 1] / np.nanmax(pdf) + y_lo,
+    #     color=lines[0].get_color(),
+    #     rasterized=True,
+    # )
+    ax.text(
+        0.44,
+        offset,
+        f"{plot_kwargs['label']}\n$\lambda_{{1 \sigma}} = {hi:.3f}, \lambda_{{90\%}} = {np.quantile(samples, 0.9):.3f}$",
+        ha="right",
+        va="bottom",
+        fontsize=10,
+        # bbox=dict(
+        #     facecolor="none",
+        #     edgecolor=color,
+        #     lw=1,
+        #     pad=2,
+        # ),
+        rasterized=True,
+    )
+    # Print quantiles
+    for q in [0.1, 0.16, 0.5, 0.84, 0.9]:
+        v = np.quantile(samples, q)
+        print(f"Quantiles {q}: {v:6.3f}")
+    print(f"Bayes factor [peak={peak:.3f}]/0: {(kernel(peak) / kernel(0))[0]}")
+    if peak != 0:
+        calc_zero_cl(x, pdf)
+
+
+def plot_lambda_posterior_hist(path, plot_kwargs={}, ax=None):
+    # Load samples
+    samples = np.loadtxt(pa.join(path, "O4_samples_graham23.dat"))
+    # Plot
+    ax.hist(
+        samples,
+        bins=50,
+        density=True,
+        histtype="step",
+        **plot_kwargs,
+    )
+
+
+def plot_lambda_posteriors(paths):
+    # Initialize figure
+    fig, ax = plt.subplots(
+        1,
+        1,
+        figsize=(4, 6),
+    )
+    # Plot
+    for pi, (path, label) in enumerate(
+        zip(
+            paths,
+            [
+                "GWTC-3.0 (83 BBHs)",
+                "BBHs with flares (6 BBHs)",
+                r"$m_1 < 40~M_\odot$ (51 BBHs, 2 flares)",
+                r"$m_1 \geq 40~M_\odot$ (29 BBHs, 4 flares)",
+                r"$m_{\rm fin} < 40~M_\odot$ (27 BBHs, 0 flares)",
+                r"$m_{\rm fin} \geq 40~M_\odot$ (52 BBHs, 4 flares)",
+                r"$L_{\rm bol} \geq$ 3e42 erg/s",
+                # "^same, only coincidences",
+                r"$L_{\rm bol} \geq$ 5e41 erg/s",
+                # "^same, only coincidences",
+            ],
+        )
+    ):
+        plot_lambda_posterior(
+            # plot_lambda_posterior_hist(
+            path,
+            offset=-pi,
+            ax=ax,
+            plot_kwargs={"label": label},
+        )
+    # Format
+    ax.set_xlim(0, 0.45)
+    ax.set_xlabel(r"$\lambda$")
+    ax.set_ylabel("Normalized PDF")
+    ax.tick_params(left=False, labelleft=False)
+    # ax.grid()
+    # ax.legend(
+    #     title="Flares/AGN/day",
+    #     loc="upper right",
+    #     edgecolor="k",
+    # )
+    # Save
+    plt.tight_layout()
+    plt.savefig(
+        __file__.replace(".py", ".pdf"),
+        # __file__.replace(".py", "_hist.pdf"),
+        dpi=300,
+    )
+    plt.savefig(
+        __file__.replace(".py", ".png"),
+        # __file__.replace(".py", "_hist.png"),
+        dpi=300,
+    )
+    plt.close()
+
+
+################################################################################
+
+# Get the directory path from the command line
+if len(sys.argv) == 1:
+    _default_array_jobs = [
+        11,
+        18,
+        12,
+        13,
+        14,
+        15,
+        16,
+        # 19,
+        17,
+        # 20,
+    ]
+    print(f"Usage: python {pa.basename(__file__)} <path_to_directory>")
+    print(f"Defaulting to array jobs {_default_array_jobs}.")
+    paths = [
+        pa.join(PROJDIR, f"Posterior_inference_lambda_O3/array/{i}")
+        for i in _default_array_jobs
+    ]
+else:
+    paths = sys.argv[1:]
+
+# Plot the association probabilities
+plot_lambda_posteriors(paths)
