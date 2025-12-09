@@ -6,8 +6,8 @@ z_max_b: 1.0 # Maximum redshift for background
 frac_det: 1.0 # Fraction of flares detected
 dt_followup: 200.0 # Length of follow-up campaign in days
 gwmapdir: "/hildafs/projects/phy220048p/share/skymaps"
-gw_csv: "/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/data/graham23_tables/gw.csv"
-flare_csv: "/hildafs/projects/phy220048p/tcabrera/bbhagn/bbhagn/data/graham23_tables/flare.csv"
+gw_csv: "/hildafs/projects/phy220048p/chandark/bbhagn/data/gw_DataFrame_clean.csv"
+flare_csv: "/hildafs/projects/phy220048p/chandark/bbhagn/data/candidates_milliquas&quaia_90.0percent.fits"
 
 # Mass cuts
 bbhmass_type: "mass_1_source" # Type of mass to apply cuts to
